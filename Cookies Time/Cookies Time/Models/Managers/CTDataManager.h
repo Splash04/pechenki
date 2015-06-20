@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CTUser.h"
 
 @interface CTDataManager : NSObject
 

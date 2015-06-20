@@ -11,6 +11,11 @@
 
 #define kServerAddress @"http://10.55.1.27:9999/api"
 
+//Basic keys
+#define kErrorCode @"errorCode"
+#define kErrorMessage @"errorMessage"
+#define kDataType @"dataType"
+
 // User
 #define kName @"name"
 #define kEmail @"email"
@@ -18,10 +23,15 @@
 #define kImagePath @"image"
 
 // Team
-#define kIdentifier @"id"
+#define kTeamIdentifier @"teamId"
 #define kInfo @"info"
 #define kTag @"tag"
 
 #define kSessionId "sessionId"
+
+
+//Api Pathes
+
+#define kApiPathLogin @"login"
 
 #endif /* CTServerConstants_h */
