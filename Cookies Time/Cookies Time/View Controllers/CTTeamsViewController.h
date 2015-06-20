@@ -11,4 +11,6 @@
 
 @interface CTTeamsViewController : CTBaseViewController <UITableViewDataSource, UITableViewDelegate>
 
++ (NSString *)segueIdentifier;
+
 @end

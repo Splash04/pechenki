@@ -7,6 +7,7 @@
 //
 
 #import "CTLoginViewController.h"
+#import "CTTeamsViewController.h"
 
 @interface CTLoginViewController ()
 
@@ -32,7 +33,8 @@
     self.login.text;
     self.password.text;
     
-    //[self performSegueWithIdentifier:SEGUE_DETAIL_INFO sender: self];
+    
+    [self performSegueWithIdentifier:[CTTeamsViewController segueIdentifier] sender: self];
 }
 
 /*
