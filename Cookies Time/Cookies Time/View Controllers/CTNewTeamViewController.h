@@ -11,4 +11,6 @@
 
 @interface CTNewTeamViewController : CTBaseViewController <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
++ (NSString *)segueIdentifier;
+
 @end

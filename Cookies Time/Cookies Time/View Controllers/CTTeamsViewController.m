@@ -12,6 +12,7 @@
 #import "CTDataManager.h"
 #import "UIRefreshControl+AFNetworking.h"
 #import "UIAlertView+AFNetworking.h"
+#import "CTNewTeamViewController.h"
 
 @interface CTTeamsViewController ()
 
@@ -48,8 +49,6 @@
     }];
     
     [UIAlertView showAlertViewForTaskWithErrorOnCompletion:task delegate:nil];
-//    [self.tableView.refreshControl setRefreshingWithStateOfTask:task];
-
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
@@ -61,7 +60,7 @@
 }
 
 - (IBAction)createTeamTap:(id)sender {
-    
+    [self performSegueWithIdentifier:[CTNewTeamViewController segueIdentifier] sender: self];
 }
 
 #pragma mark tableView
@@ -82,8 +81,5 @@
     
     return cell;
 }
-
-
-
 
 @end

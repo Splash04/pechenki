@@ -25,10 +25,25 @@
 
 @implementation CTNewTeamViewController
 
++ (NSString *)segueIdentifier
+{
+    static NSString *cellIdentifier = nil;
+    static dispatch_once_t onceToken = 0;
+    dispatch_once(&onceToken, ^{
+        cellIdentifier = NSStringFromClass([self class]);
+    });
+    return cellIdentifier;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.restaurants = [[NSMutableArray alloc] initWithObjects:RESTAURANT_LIDO, nil];
+    
+    self.desc.layer.cornerRadius = 5.0f;
+    self.desc.layer.masksToBounds = NO;
+    self.desc.layer.borderWidth = .5f;
+    self.desc.layer.borderColor = [UIColor lightGrayColor].CGColor;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -98,7 +113,7 @@
          self.restaurant.text = self.restaurants[selectedIndex];
      } cancelBlock:^(ActionSheetStringPicker *picker) {
          
-     } origin:self];
+     } origin:self.view];
 }
 
 - (IBAction)restaurantChoice:(id)sender {
