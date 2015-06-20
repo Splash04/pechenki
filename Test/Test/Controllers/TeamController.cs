@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
+using Test.DataAccess;
 using Test.DataAccess.Entities;
 using Test.Results;
 
@@ -13,37 +14,35 @@ namespace Test.Controllers
     {
         public BaseResult Get()
         {
+            List<Team> result = new List<Team>();
+            using (var db = new CookieContext())
+            {
+                result = db.Teams.ToList();
+            }
             return new TeamResult
             {
                 ErrorCode = 0,
-                DataType = "team",
-                Teams = new List<Team>()
-                {
-                    new Team
-                    {
-                        TeamId = 1,
-                        Name = "Team 1",
-                        Info = "Info 1",
-                        Tag = "#tag1"
-                    },
-                    new Team
-                    {
-                        TeamId = 2,
-                        Name = "Team 2",
-                        Info = "Info 2",
-                        Tag = "#tag2"
-                    }
-                }
+                DataType = "teams",
+                Teams = result
             };
         }
 
         public BaseResult Get(int teamId)
         {
+            List<Team> result = new List<Team>();
+            using (var db = new CookieContext())
+            {
+                var team = db.Teams.FirstOrDefault(x => x.TeamId == teamId);
+                if (team != null)
+                {
+                    result.Add(team);
+                }
+            }
             return new TeamResult
             {
                 ErrorCode = 0,
-                DataType = "team",
-                Teams = new List<Team>()
+                DataType = "teams",
+                Teams = result
             };
         }
 
@@ -52,7 +51,7 @@ namespace Test.Controllers
             return new TeamResult
             {
                 ErrorCode = 0,
-                DataType = "team",
+                DataType = "teams",
                 Teams = new List<Team>()
             };
         }
