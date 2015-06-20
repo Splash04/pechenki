@@ -18,10 +18,14 @@
         return nil;
     }
     
-    self.name = [attributes stringForKey:kName ifNull:nil];
-    self.email = [attributes stringForKey:kEmail ifNull:nil];
-    self.phoneNumber = [attributes stringForKey:kPhoneNumber ifNull:nil];
-    self.imagePath = [attributes stringForKey:kImagePath ifNull:nil];
+    if(attributes != nil) {
+        self.name = [attributes stringForKey:kName ifNull:nil];
+        self.email = [attributes stringForKey:kEmail ifNull:nil];
+        self.phoneNumber = [attributes stringForKey:kPhoneNumber ifNull:nil];
+        self.imagePath = [attributes stringForKey:kImagePath ifNull:nil];
+    } else {
+        NSLog(@"User data is empty");
+    }
     
     return self;
 }

@@ -23,4 +23,32 @@
     return aValue;
 }
 
+- (NSInteger)integerForKey:(id)aKey ifNull:(NSInteger)aValue
+{
+    if (!aKey) return aValue;
+    id result = [self objectForKey:aKey];
+    if ([result isKindOfClass:[NSNumber class]] || [result isKindOfClass:[NSString class]])
+    {
+        NSInteger value = [result integerValue];
+        if (!isnan(value)) return value;
+    }
+    
+    return aValue;
+}
+
+- (id)objectForKey:(id)aKey ifNull:(id)aObject
+{
+    id result = [self objectForKey:aKey];
+    if (result != [NSNull null])
+    {
+        return result;
+    }
+    else
+    {
+        return aObject;
+    }
+    
+    return nil;
+}
+
 @end

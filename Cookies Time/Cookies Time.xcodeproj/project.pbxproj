@@ -63,6 +63,7 @@
 		F0CFA49B1B359CA800692362 /* NSDictionary+JSONValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONValidation.h"; sourceTree = "<group>"; };
 		F0CFA49C1B359CA800692362 /* NSDictionary+JSONValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONValidation.m"; sourceTree = "<group>"; };
 		F0CFA49E1B359CAF00692362 /* CTServerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTServerConstants.h; sourceTree = "<group>"; };
+		F0CFA49F1B35AAC100692362 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +144,7 @@
 		F01198231B355EB100E6AC66 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				F0CFA49F1B35AAC100692362 /* Constants.h */,
 				F01198241B355EB100E6AC66 /* Info.plist */,
 				F01198251B355EB100E6AC66 /* main.m */,
 			);

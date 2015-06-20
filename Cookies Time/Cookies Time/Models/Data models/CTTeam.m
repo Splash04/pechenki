@@ -18,7 +18,7 @@
         return nil;
     }
     
-    self.identifier = [attributes stringForKey:kIdentifier ifNull:nil];
+    self.identifier = [attributes stringForKey:kTeamIdentifier ifNull:nil];
     self.name = [attributes stringForKey:kName ifNull:nil];
     self.imagePath = [attributes stringForKey:kImagePath ifNull:nil];
     self.tag = [attributes stringForKey:kTag ifNull:nil];

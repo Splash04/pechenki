@@ -11,5 +11,7 @@
 @interface NSDictionary (JSONValidation)
 
 - (NSString *)stringForKey:(id)aKey ifNull:(NSString *)aValue;
+- (NSInteger)integerForKey:(id)aKey ifNull:(NSInteger)aValue;
+- (id)objectForKey:(id)aKey ifNull:(id)aObject;
 
 @end
