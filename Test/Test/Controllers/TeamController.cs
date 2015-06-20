@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using Test.DataAccess;
 using Test.DataAccess.Entities;
+using Test.Models;
 using Test.Results;
 
 namespace Test.Controllers
@@ -29,16 +31,28 @@ namespace Test.Controllers
             };
         }
 
-        public BaseResult Get(int teamId)
+        public BaseResult GetById(int teamId)
         {
-            var result = new List<Team>();
+            Team result;
             using (var db = new CookieContext())
             {
-                var team = db.Teams.FirstOrDefault(x => x.TeamId == teamId);
-                if (team != null)
-                {
-                    result.Add(team);
-                }
+                result = db.Teams.FirstOrDefault(x => x.TeamId == teamId);
+            }
+            return new TeamResult
+            {
+                ErrorCode = 0,
+                DataType = "team",
+                Team = result
+            };
+        }
+
+        public BaseResult GetUserTeams(int userId)
+        {
+            List<Team> result = new List<Team>();
+            using (var db = new CookieContext())
+            {
+                var userTeams = db.UserTeams.Where(x => x.UserId == userId);
+                result.AddRange(userTeams.Select(userTeam => db.Teams.FirstOrDefault(x => x.TeamId == userTeam.TeamId)));
             }
             return new TeamResult
             {
@@ -48,23 +62,28 @@ namespace Test.Controllers
             };
         }
 
-        public BaseResult GetUserTeams(int userId)
+        public BaseResult Create(Team model)
         {
-            
-            return new TeamResult
+            try
             {
-                ErrorCode = 0,
-                DataType = "teams",
-                Teams = new List<Team>()
-            };
-        }
-
-        public BaseResult Post(Team model)
-        {
-            return new BaseResult
+                using (var db = new CookieContext())
+                {
+                    db.Teams.Add(model);
+                    db.SaveChanges();
+                }
+                return new BaseResult
+                {
+                    ErrorCode = 0
+                };
+            }
+            catch (Exception)
             {
-                ErrorCode = model.TeamId
-            };
+                return new ErrorResult
+                {
+                    ErrorCode = 2,
+                    ErrorMessage = "Упс! Что-то пошло не так с нашей базой данных."
+                };
+            }
         }
     }
 }

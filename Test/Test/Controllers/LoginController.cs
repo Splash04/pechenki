@@ -33,7 +33,7 @@ namespace Test.Controllers
                     {
                         ErrorCode = 2,
                         DataType = "error",
-                        ErrorMessage = "Sorry, but you are not in our DB yet :("
+                        ErrorMessage = "Очень жаль, но наша база не содержит пока Вас :("
                     };
                 }
 
@@ -51,7 +51,7 @@ namespace Test.Controllers
                 {
                     ErrorCode = 1,
                     DataType = "error",
-                    ErrorMessage = "Invalid username of password"
+                    ErrorMessage = "Неправильный логин или пароль"
                 };
             }
         }
