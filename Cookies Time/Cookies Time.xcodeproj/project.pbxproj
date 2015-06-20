@@ -13,6 +13,8 @@
 		792C314A1B35F4CC00148EB2 /* CTTwitterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C31491B35F4CC00148EB2 /* CTTwitterTableViewCell.m */; };
 		792C314D1B360B7500148EB2 /* CTPeopleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C314C1B360B7500148EB2 /* CTPeopleListViewController.m */; };
 		792C31511B361EDC00148EB2 /* CTPeopleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C31501B361EDC00148EB2 /* CTPeopleTableViewCell.m */; };
+		792C31541B3622AB00148EB2 /* CTPaymentInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C31531B3622AB00148EB2 /* CTPaymentInfoTableViewController.m */; };
+		792C31581B36237900148EB2 /* CTPaymentInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C31571B36237900148EB2 /* CTPaymentInfoTableViewCell.m */; };
 		7978D2A41B358B07005AA5B5 /* CTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978D2A31B358B07005AA5B5 /* CTLoginViewController.m */; };
 		7978D2A71B3590CA005AA5B5 /* CTTeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978D2A61B3590CA005AA5B5 /* CTTeamsViewController.m */; };
 		7978D2AF1B359360005AA5B5 /* CTTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978D2AE1B359360005AA5B5 /* CTTeamTableViewCell.m */; };
@@ -44,6 +46,10 @@
 		792C314C1B360B7500148EB2 /* CTPeopleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTPeopleListViewController.m; path = "Cookies Time/View Controllers/CTPeopleListViewController.m"; sourceTree = SOURCE_ROOT; };
 		792C314F1B361EDC00148EB2 /* CTPeopleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTPeopleTableViewCell.h; path = People/CTPeopleTableViewCell.h; sourceTree = "<group>"; };
 		792C31501B361EDC00148EB2 /* CTPeopleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTPeopleTableViewCell.m; path = People/CTPeopleTableViewCell.m; sourceTree = "<group>"; };
+		792C31521B3622AB00148EB2 /* CTPaymentInfoTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTPaymentInfoTableViewController.h; path = "Cookies Time/View Controllers/CTPaymentInfoTableViewController.h"; sourceTree = SOURCE_ROOT; };
+		792C31531B3622AB00148EB2 /* CTPaymentInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTPaymentInfoTableViewController.m; path = "Cookies Time/View Controllers/CTPaymentInfoTableViewController.m"; sourceTree = SOURCE_ROOT; };
+		792C31561B36237900148EB2 /* CTPaymentInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTPaymentInfoTableViewCell.h; path = PaymentInfo/CTPaymentInfoTableViewCell.h; sourceTree = "<group>"; };
+		792C31571B36237900148EB2 /* CTPaymentInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTPaymentInfoTableViewCell.m; path = PaymentInfo/CTPaymentInfoTableViewCell.m; sourceTree = "<group>"; };
 		7978D2A21B358B07005AA5B5 /* CTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTLoginViewController.h; path = "Cookies Time/View Controllers/CTLoginViewController.h"; sourceTree = SOURCE_ROOT; };
 		7978D2A31B358B07005AA5B5 /* CTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTLoginViewController.m; path = "Cookies Time/View Controllers/CTLoginViewController.m"; sourceTree = SOURCE_ROOT; };
 		7978D2A51B3590CA005AA5B5 /* CTTeamsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTTeamsViewController.h; path = "Cookies Time/View Controllers/CTTeamsViewController.h"; sourceTree = SOURCE_ROOT; };
@@ -109,6 +115,15 @@
 				792C31501B361EDC00148EB2 /* CTPeopleTableViewCell.m */,
 			);
 			name = People;
+			sourceTree = "<group>";
+		};
+		792C31551B36234E00148EB2 /* PaymentInfo */ = {
+			isa = PBXGroup;
+			children = (
+				792C31561B36237900148EB2 /* CTPaymentInfoTableViewCell.h */,
+				792C31571B36237900148EB2 /* CTPaymentInfoTableViewCell.m */,
+			);
+			name = PaymentInfo;
 			sourceTree = "<group>";
 		};
 		7978D2A91B359242005AA5B5 /* Team */ = {
@@ -252,6 +267,8 @@
 		F0CFA4731B3580A300692362 /* Payment Info */ = {
 			isa = PBXGroup;
 			children = (
+				792C31521B3622AB00148EB2 /* CTPaymentInfoTableViewController.h */,
+				792C31531B3622AB00148EB2 /* CTPaymentInfoTableViewController.m */,
 			);
 			path = "Payment Info";
 			sourceTree = "<group>";
@@ -329,6 +346,7 @@
 		F0CFA47B1B3580A300692362 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				792C31551B36234E00148EB2 /* PaymentInfo */,
 				792C314E1B361EB100148EB2 /* People */,
 				792C31471B35F47400148EB2 /* Twitter */,
 				7978D2A91B359242005AA5B5 /* Team */,
@@ -451,6 +469,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0CFA47E1B3580CA00692362 /* CTBaseViewController.m in Sources */,
+				792C31541B3622AB00148EB2 /* CTPaymentInfoTableViewController.m in Sources */,
+				792C31581B36237900148EB2 /* CTPaymentInfoTableViewCell.m in Sources */,
 				7978D2A41B358B07005AA5B5 /* CTLoginViewController.m in Sources */,
 				F011982C1B355EB100E6AC66 /* Cookies_Time.xcdatamodeld in Sources */,
 				F0CFA49D1B359CA800692362 /* NSDictionary+JSONValidation.m in Sources */,

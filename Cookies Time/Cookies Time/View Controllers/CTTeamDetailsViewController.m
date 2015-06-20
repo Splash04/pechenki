@@ -8,6 +8,8 @@
 
 #import "CTTeamDetailsViewController.h"
 #import "CTTwitterTableViewCell.h"
+#import "CTPeopleListViewController.h"
+#import "CTPaymentInfoTableViewController.h"
 
 @interface CTTeamDetailsViewController ()
 
@@ -99,10 +101,12 @@
 }
 
 - (void)tapPeople:(id)sender {
+    [self performSegueWithIdentifier:[CTPeopleListViewController segueIdentifier] sender: self];
     NSLog(@"tapPeople");
 }
 
 - (void)tapPayment:(id)sender {
+    [self performSegueWithIdentifier:[CTPaymentInfoTableViewController segueIdentifier] sender: self];
     NSLog(@"tapPayment");
 }
 
@@ -151,15 +155,5 @@
 #warning join to team
 
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

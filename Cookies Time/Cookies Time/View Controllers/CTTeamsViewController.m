@@ -86,7 +86,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.currentTeam = self.dataArray[indexPath.row];
-    [self performSegueWithIdentifier:[CTTeamDetailsViewController segueIdentifier] sender: self];
+    [self performSegueWithIdentifier:[CTTeamDetailsViewController segueIdentifier] sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
