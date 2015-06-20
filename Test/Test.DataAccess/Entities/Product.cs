@@ -16,5 +16,8 @@ namespace Test.DataAccess.Entities
 
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
+
+        public int RestaurantId { get; set; }
+        public virtual Restaurant Restaurant { get; set; }
     }
 }

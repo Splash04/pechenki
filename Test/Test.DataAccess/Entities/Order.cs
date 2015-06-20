@@ -12,6 +12,8 @@ namespace Test.DataAccess.Entities
         public decimal Price { get; set; }
         public int TeamId { get; set; }
         public int UserId { get; set; }
+        public DateTime Date { get; set; }
+        public bool IsOpen { get; set; }
 
         public virtual List<Product> Products { get; set; }
         public virtual Team Team { get; set; } 

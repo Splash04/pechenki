@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ namespace Test.SmgConnect
     {
         static void Main(string[] args)
         {
+            Database.SetInitializer<CookieContext>(null);
             SmgService smgService = new SmgService();
             string sessionId = smgService.Authenticate("natalia.govor", "dfcmrf");
             List<SmgEmployeeDetails> employees = smgService.GetAllEmployees(sessionId);
@@ -23,8 +25,8 @@ namespace Test.SmgConnect
                 {
                     var user = new User
                     {
-                        FirstName = smgEmployeeDetailse.FirstNameEng,
-                        LastName = smgEmployeeDetailse.LastNameEng,
+                        FirstName = smgEmployeeDetailse.FirstName,
+                        LastName = smgEmployeeDetailse.LastName,
                         Phone = smgEmployeeDetailse.Phone,
                         Email = smgEmployeeDetailse.Email
                     };

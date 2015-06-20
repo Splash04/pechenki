@@ -76,8 +76,8 @@ namespace Test.SmgConnect
                                 employeeDetailses.Add(new SmgEmployeeDetails
                                 {
                                     Email = details.Email,
-                                    FirstNameEng = details.FirstNameEng,
-                                    LastNameEng = details.LastNameEng,
+                                    FirstName = details.FirstName,
+                                    LastName = details.LastName,
                                     Image = details.Image,
                                     Phone = details.Phone,
                                     ProfileId = details.ProfileId
