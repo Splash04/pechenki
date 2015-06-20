@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D7A6B19298D48427F3FF14B /* libPods-Cookies Time.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B438F63D5B4A1750C22710 /* libPods-Cookies Time.a */; };
+		7978D2A41B358B07005AA5B5 /* CTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978D2A31B358B07005AA5B5 /* CTLoginViewController.m */; };
 		F01198261B355EB100E6AC66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F01198251B355EB100E6AC66 /* main.m */; };
 		F01198291B355EB100E6AC66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F01198281B355EB100E6AC66 /* AppDelegate.m */; };
 		F011982C1B355EB100E6AC66 /* Cookies_Time.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F011982A1B355EB100E6AC66 /* Cookies_Time.xcdatamodeld */; };
@@ -23,6 +24,8 @@
 
 /* Begin PBXFileReference section */
 		48618A33788FBA24165E2410 /* Pods-Cookies Time.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cookies Time.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cookies Time/Pods-Cookies Time.release.xcconfig"; sourceTree = "<group>"; };
+		7978D2A21B358B07005AA5B5 /* CTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTLoginViewController.h; path = "Cookies Time/View Controllers/CTLoginViewController.h"; sourceTree = SOURCE_ROOT; };
+		7978D2A31B358B07005AA5B5 /* CTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTLoginViewController.m; path = "Cookies Time/View Controllers/CTLoginViewController.m"; sourceTree = SOURCE_ROOT; };
 		D8B438F63D5B4A1750C22710 /* libPods-Cookies Time.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cookies Time.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB09538F27FA6687E4387ED8 /* Pods-Cookies Time.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cookies Time.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cookies Time/Pods-Cookies Time.debug.xcconfig"; sourceTree = "<group>"; };
 		F01198201B355EB100E6AC66 /* Cookies Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cookies Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +153,8 @@
 		F0CFA46E1B3580A300692362 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				7978D2A21B358B07005AA5B5 /* CTLoginViewController.h */,
+				7978D2A31B358B07005AA5B5 /* CTLoginViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -360,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0CFA47E1B3580CA00692362 /* CTBaseViewController.m in Sources */,
+				7978D2A41B358B07005AA5B5 /* CTLoginViewController.m in Sources */,
 				F011982C1B355EB100E6AC66 /* Cookies_Time.xcdatamodeld in Sources */,
 				F01198291B355EB100E6AC66 /* AppDelegate.m in Sources */,
 				F0CFA4811B35813F00692362 /* CTHTTPSessionManager.m in Sources */,
