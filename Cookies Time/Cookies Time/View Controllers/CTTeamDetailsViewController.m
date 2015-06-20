@@ -147,6 +147,10 @@
     return cell;
 
 }
+- (IBAction)joinToTeamTap:(id)sender {
+#warning join to team
+
+}
 
 /*
 #pragma mark - Navigation

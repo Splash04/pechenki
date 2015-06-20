@@ -8,7 +8,7 @@
 
 #import "CTBaseViewController.h"
 
-@interface CTPeopleListViewController : CTBaseViewController <UITableViewDelegate, UITableViewDataSource>
+@interface CTPeopleListViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 
 + (NSString *)segueIdentifier;
 

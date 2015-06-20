@@ -667,39 +667,101 @@
             </objects>
             <point key="canvasLocation" x="2305.5" y="441.75"/>
         </scene>
-        <!--Список людей-->
-        <scene sceneID="heE-EV-nmq">
-            <objects>
-                <viewController id="dB2-S6-9dm" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="4oM-Gc-xa4"/>
-                        <viewControllerLayoutGuide type="bottom" id="n5u-Or-6Hh"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ILS-pV-5Bo">
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Список людей" id="x9m-4h-5Fb">
-                        <barButtonItem key="backBarButtonItem" title="Назад" id="yc1-VH-5WQ"/>
-                    </navigationItem>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jlQ-Oh-JSs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1617" y="-901.5"/>
-        </scene>
-        <!--Title-->
+        <!--Список участников-->
         <scene sceneID="gNe-Sr-lbg">
             <objects>
-                <tableViewController id="TDH-rV-ldp" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fnh-hk-I0x">
+                <tableViewController id="TDH-rV-ldp" customClass="CTPeopleListViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="85" sectionHeaderHeight="22" sectionFooterHeight="22" id="fnh-hk-I0x">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Fxd-gu-4JC">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CTPeopleTableViewCell" rowHeight="85" id="Fxd-gu-4JC" customClass="CTPeopleTableViewCell">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fxd-gu-4JC" id="ksT-J2-obi">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmH-Lm-zwy">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbN-bu-GVQ">
+                                            <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AUf-AN-9FT">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="69" id="5qA-Om-TW2"/>
+                                            </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="5qA-Om-TW2"/>
+                                                </mask>
+                                            </variation>
+                                            <variation key="heightClass=regular-widthClass=compact">
+                                                <mask key="constraints">
+                                                    <include reference="5qA-Om-TW2"/>
+                                                </mask>
+                                            </variation>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="AUf-AN-9FT" firstAttribute="top" secondItem="ksT-J2-obi" secondAttribute="top" constant="7" id="645-oZ-cb3"/>
+                                        <constraint firstAttribute="bottom" secondItem="AUf-AN-9FT" secondAttribute="bottom" constant="8" id="KSU-nd-Qbm"/>
+                                        <constraint firstItem="QbN-bu-GVQ" firstAttribute="top" secondItem="dmH-Lm-zwy" secondAttribute="bottom" constant="8" id="LyM-qq-I2b"/>
+                                        <constraint firstAttribute="trailing" secondItem="dmH-Lm-zwy" secondAttribute="trailing" constant="8" id="RhZ-1w-dyZ"/>
+                                        <constraint firstItem="dmH-Lm-zwy" firstAttribute="leading" secondItem="AUf-AN-9FT" secondAttribute="trailing" constant="8" id="ThV-KZ-XQA"/>
+                                        <constraint firstAttribute="trailing" secondItem="QbN-bu-GVQ" secondAttribute="trailing" constant="8" id="UCP-S7-gba"/>
+                                        <constraint firstItem="dmH-Lm-zwy" firstAttribute="top" secondItem="AUf-AN-9FT" secondAttribute="top" id="c9H-Rx-XFA"/>
+                                        <constraint firstItem="QbN-bu-GVQ" firstAttribute="leading" secondItem="AUf-AN-9FT" secondAttribute="trailing" constant="8" id="f2g-wx-8lP"/>
+                                        <constraint firstItem="AUf-AN-9FT" firstAttribute="leading" secondItem="ksT-J2-obi" secondAttribute="leading" constant="8" id="ut1-Fe-uor"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="subviews">
+                                            <exclude reference="dmH-Lm-zwy"/>
+                                            <exclude reference="QbN-bu-GVQ"/>
+                                            <exclude reference="AUf-AN-9FT"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <exclude reference="645-oZ-cb3"/>
+                                            <exclude reference="KSU-nd-Qbm"/>
+                                            <exclude reference="ut1-Fe-uor"/>
+                                            <exclude reference="RhZ-1w-dyZ"/>
+                                            <exclude reference="ThV-KZ-XQA"/>
+                                            <exclude reference="c9H-Rx-XFA"/>
+                                            <exclude reference="LyM-qq-I2b"/>
+                                            <exclude reference="UCP-S7-gba"/>
+                                            <exclude reference="f2g-wx-8lP"/>
+                                        </mask>
+                                    </variation>
+                                    <variation key="heightClass=regular-widthClass=compact">
+                                        <mask key="subviews">
+                                            <include reference="dmH-Lm-zwy"/>
+                                            <include reference="QbN-bu-GVQ"/>
+                                            <include reference="AUf-AN-9FT"/>
+                                        </mask>
+                                        <mask key="constraints">
+                                            <include reference="645-oZ-cb3"/>
+                                            <include reference="KSU-nd-Qbm"/>
+                                            <include reference="ut1-Fe-uor"/>
+                                            <include reference="RhZ-1w-dyZ"/>
+                                            <include reference="ThV-KZ-XQA"/>
+                                            <include reference="c9H-Rx-XFA"/>
+                                            <include reference="LyM-qq-I2b"/>
+                                            <include reference="UCP-S7-gba"/>
+                                            <include reference="f2g-wx-8lP"/>
+                                        </mask>
+                                    </variation>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="FIO" destination="dmH-Lm-zwy" id="2Tw-e9-TW0"/>
+                                    <outlet property="balance" destination="QbN-bu-GVQ" id="lQu-jR-sNl"/>
+                                    <outlet property="photo" destination="AUf-AN-9FT" id="ilc-Bq-zD7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -707,11 +769,13 @@
                             <outlet property="delegate" destination="TDH-rV-ldp" id="No5-ok-VUf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Title" id="PHn-Ll-uvV"/>
+                    <navigationItem key="navigationItem" title="Список участников" id="PHn-Ll-uvV">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="S8Z-zD-XgC"/>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oBp-mK-kVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2356.5" y="-1064.25"/>
+            <point key="canvasLocation" x="1960.5" y="-959.25"/>
         </scene>
         <!--Группа-->
         <scene sceneID="fVr-lJ-xyp">
@@ -1090,6 +1154,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Группа" id="Skv-NE-65A">
                         <barButtonItem key="backBarButtonItem" title="Назад" id="lvZ-7y-Um7"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="daH-C6-TUO">
+                            <connections>
+                                <action selector="joinToTeamTap:" destination="zOF-bf-I7d" id="WTK-Gq-bTl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="btnHistory" destination="eWp-ea-oPk" id="HBb-gb-cmP"/>
@@ -1099,8 +1168,7 @@
                         <outlet property="btnPayment" destination="LJ6-jR-i95" id="lqE-nR-cXg"/>
                         <outlet property="btnPeople" destination="DEL-gH-sYD" id="5MR-MV-qiL"/>
                         <outlet property="tableView" destination="sVc-eY-iEq" id="HAJ-o5-iqE"/>
-                        <segue destination="dB2-S6-9dm" kind="show" id="XNb-Wx-3qI"/>
-                        <segue destination="TDH-rV-ldp" kind="show" id="0jx-8J-P3t"/>
+                        <segue destination="TDH-rV-ldp" kind="show" identifier="CTPeopleListViewController" id="0jx-8J-P3t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vcz-QI-bSn" userLabel="First Responder" sceneMemberID="firstResponder"/>
