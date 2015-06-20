@@ -10,5 +10,7 @@ namespace Test.Results
     public class BaseResult
     {
         public int ErrorCode { get; set; }
+
+        public string DataType { get; set; }
     }
 }

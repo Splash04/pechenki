@@ -112,15 +112,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\TopicController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\TeamController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Formatters\JsonCamelCaseFormatter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Topic.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Results\BaseResult.cs" />
-    <Compile Include="Results\TopicResult.cs" />
+    <Compile Include="Results\CategoryResult.cs" />
+    <Compile Include="Results\ErrorResult.cs" />
+    <Compile Include="Results\LoginResult.cs" />
+    <Compile Include="Results\OrderResult.cs" />
+    <Compile Include="Results\ProductResult.cs" />
+    <Compile Include="Results\RestaurantResult.cs" />
+    <Compile Include="Results\TeamResult.cs" />
+    <Compile Include="Results\UserResult.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -138,6 +146,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

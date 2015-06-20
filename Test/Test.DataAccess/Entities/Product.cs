@@ -11,6 +11,8 @@ namespace Test.DataAccess.Entities
         public int ProductId { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
+        public string ProductWeight { get; set; }
+        public string ImageUrl { get; set; }
 
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
