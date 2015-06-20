@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0D7A6B19298D48427F3FF14B /* libPods-Cookies Time.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B438F63D5B4A1750C22710 /* libPods-Cookies Time.a */; };
+		7978D2A41B358B07005AA5B5 /* CTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978D2A31B358B07005AA5B5 /* CTLoginViewController.m */; };
+		7978D2A71B3590CA005AA5B5 /* CTTeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978D2A61B3590CA005AA5B5 /* CTTeamsViewController.m */; };
+		7978D2AF1B359360005AA5B5 /* CTTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978D2AE1B359360005AA5B5 /* CTTeamTableViewCell.m */; };
 		F01198261B355EB100E6AC66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F01198251B355EB100E6AC66 /* main.m */; };
 		F01198291B355EB100E6AC66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F01198281B355EB100E6AC66 /* AppDelegate.m */; };
 		F011982C1B355EB100E6AC66 /* Cookies_Time.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F011982A1B355EB100E6AC66 /* Cookies_Time.xcdatamodeld */; };
@@ -19,13 +22,19 @@
 		F0CFA4811B35813F00692362 /* CTHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4801B35813F00692362 /* CTHTTPSessionManager.m */; };
 		F0CFA4841B35817700692362 /* CTSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4831B35817700692362 /* CTSettingsManager.m */; };
 		F0CFA4871B3581D300692362 /* CTDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4861B3581D300692362 /* CTDataManager.m */; };
-		F0CFA48A1B358F3300692362 /* CTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4891B358F3300692362 /* CTUser.m */; };
-		F0CFA4901B35935600692362 /* NSDictionary+JSONValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA48F1B35935600692362 /* NSDictionary+JSONValidation.m */; };
-		F0CFA4931B35954B00692362 /* CTTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4921B35954B00692362 /* CTTeam.m */; };
+		F0CFA4981B359C9500692362 /* CTTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4951B359C9500692362 /* CTTeam.m */; };
+		F0CFA4991B359C9500692362 /* CTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4971B359C9500692362 /* CTUser.m */; };
+		F0CFA49D1B359CA800692362 /* NSDictionary+JSONValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA49C1B359CA800692362 /* NSDictionary+JSONValidation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		48618A33788FBA24165E2410 /* Pods-Cookies Time.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cookies Time.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cookies Time/Pods-Cookies Time.release.xcconfig"; sourceTree = "<group>"; };
+		7978D2A21B358B07005AA5B5 /* CTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTLoginViewController.h; path = "Cookies Time/View Controllers/CTLoginViewController.h"; sourceTree = SOURCE_ROOT; };
+		7978D2A31B358B07005AA5B5 /* CTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTLoginViewController.m; path = "Cookies Time/View Controllers/CTLoginViewController.m"; sourceTree = SOURCE_ROOT; };
+		7978D2A51B3590CA005AA5B5 /* CTTeamsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTTeamsViewController.h; path = "Cookies Time/View Controllers/CTTeamsViewController.h"; sourceTree = SOURCE_ROOT; };
+		7978D2A61B3590CA005AA5B5 /* CTTeamsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTTeamsViewController.m; path = "Cookies Time/View Controllers/CTTeamsViewController.m"; sourceTree = SOURCE_ROOT; };
+		7978D2AD1B359360005AA5B5 /* CTTeamTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTTeamTableViewCell.h; path = Team/CTTeamTableViewCell.h; sourceTree = "<group>"; };
+		7978D2AE1B359360005AA5B5 /* CTTeamTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTTeamTableViewCell.m; path = Team/CTTeamTableViewCell.m; sourceTree = "<group>"; };
 		D8B438F63D5B4A1750C22710 /* libPods-Cookies Time.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cookies Time.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB09538F27FA6687E4387ED8 /* Pods-Cookies Time.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cookies Time.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cookies Time/Pods-Cookies Time.debug.xcconfig"; sourceTree = "<group>"; };
 		F01198201B355EB100E6AC66 /* Cookies Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cookies Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,14 +56,13 @@
 		F0CFA4831B35817700692362 /* CTSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSettingsManager.m; sourceTree = "<group>"; };
 		F0CFA4851B3581D300692362 /* CTDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTDataManager.h; sourceTree = "<group>"; };
 		F0CFA4861B3581D300692362 /* CTDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTDataManager.m; sourceTree = "<group>"; };
-		F0CFA4881B358F3300692362 /* CTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTUser.h; sourceTree = "<group>"; };
-		F0CFA4891B358F3300692362 /* CTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTUser.m; sourceTree = "<group>"; };
-		F0CFA48B1B35910600692362 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
-		F0CFA48C1B35914600692362 /* CTServerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTServerConstants.h; sourceTree = "<group>"; };
-		F0CFA48E1B35935600692362 /* NSDictionary+JSONValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONValidation.h"; sourceTree = "<group>"; };
-		F0CFA48F1B35935600692362 /* NSDictionary+JSONValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONValidation.m"; sourceTree = "<group>"; };
-		F0CFA4911B35954B00692362 /* CTTeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTeam.h; sourceTree = "<group>"; };
-		F0CFA4921B35954B00692362 /* CTTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTeam.m; sourceTree = "<group>"; };
+		F0CFA4941B359C9500692362 /* CTTeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTeam.h; sourceTree = "<group>"; };
+		F0CFA4951B359C9500692362 /* CTTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTeam.m; sourceTree = "<group>"; };
+		F0CFA4961B359C9500692362 /* CTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTUser.h; sourceTree = "<group>"; };
+		F0CFA4971B359C9500692362 /* CTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTUser.m; sourceTree = "<group>"; };
+		F0CFA49B1B359CA800692362 /* NSDictionary+JSONValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONValidation.h"; sourceTree = "<group>"; };
+		F0CFA49C1B359CA800692362 /* NSDictionary+JSONValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONValidation.m"; sourceTree = "<group>"; };
+		F0CFA49E1B359CAF00692362 /* CTServerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTServerConstants.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +77,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7978D2A91B359242005AA5B5 /* Team */ = {
+			isa = PBXGroup;
+			children = (
+				7978D2AD1B359360005AA5B5 /* CTTeamTableViewCell.h */,
+				7978D2AE1B359360005AA5B5 /* CTTeamTableViewCell.m */,
+			);
+			name = Team;
+			sourceTree = "<group>";
+		};
 		AF84F4AE36CD3444C2B13BC4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,7 +145,6 @@
 			children = (
 				F01198241B355EB100E6AC66 /* Info.plist */,
 				F01198251B355EB100E6AC66 /* main.m */,
-				F0CFA48B1B35910600692362 /* Constants.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -162,6 +178,8 @@
 		F0CFA46E1B3580A300692362 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				7978D2A21B358B07005AA5B5 /* CTLoginViewController.h */,
+				7978D2A31B358B07005AA5B5 /* CTLoginViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -218,6 +236,8 @@
 		F0CFA4761B3580A300692362 /* Teams */ = {
 			isa = PBXGroup;
 			children = (
+				7978D2A51B3590CA005AA5B5 /* CTTeamsViewController.h */,
+				7978D2A61B3590CA005AA5B5 /* CTTeamsViewController.m */,
 			);
 			path = Teams;
 			sourceTree = "<group>";
@@ -225,7 +245,7 @@
 		F0CFA4771B3580A300692362 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				F0CFA48D1B35932100692362 /* Categories */,
+				F0CFA49A1B359CA800692362 /* Categories */,
 				F0CFA4781B3580A300692362 /* Data models */,
 				F0CFA4791B3580A300692362 /* Database */,
 				F0CFA47A1B3580A300692362 /* Managers */,
@@ -236,10 +256,10 @@
 		F0CFA4781B3580A300692362 /* Data models */ = {
 			isa = PBXGroup;
 			children = (
-				F0CFA4881B358F3300692362 /* CTUser.h */,
-				F0CFA4891B358F3300692362 /* CTUser.m */,
-				F0CFA4911B35954B00692362 /* CTTeam.h */,
-				F0CFA4921B35954B00692362 /* CTTeam.m */,
+				F0CFA4941B359C9500692362 /* CTTeam.h */,
+				F0CFA4951B359C9500692362 /* CTTeam.m */,
+				F0CFA4961B359C9500692362 /* CTUser.h */,
+				F0CFA4971B359C9500692362 /* CTUser.m */,
 			);
 			path = "Data models";
 			sourceTree = "<group>";
@@ -254,7 +274,7 @@
 		F0CFA47A1B3580A300692362 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				F0CFA48C1B35914600692362 /* CTServerConstants.h */,
+				F0CFA49E1B359CAF00692362 /* CTServerConstants.h */,
 				F0CFA47F1B35813F00692362 /* CTHTTPSessionManager.h */,
 				F0CFA4801B35813F00692362 /* CTHTTPSessionManager.m */,
 				F0CFA4821B35817700692362 /* CTSettingsManager.h */,
@@ -268,15 +288,16 @@
 		F0CFA47B1B3580A300692362 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7978D2A91B359242005AA5B5 /* Team */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		F0CFA48D1B35932100692362 /* Categories */ = {
+		F0CFA49A1B359CA800692362 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				F0CFA48E1B35935600692362 /* NSDictionary+JSONValidation.h */,
-				F0CFA48F1B35935600692362 /* NSDictionary+JSONValidation.m */,
+				F0CFA49B1B359CA800692362 /* NSDictionary+JSONValidation.h */,
+				F0CFA49C1B359CA800692362 /* NSDictionary+JSONValidation.m */,
 			);
 			path = Categories;
 			sourceTree = "<group>";
@@ -387,15 +408,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0CFA47E1B3580CA00692362 /* CTBaseViewController.m in Sources */,
+				7978D2A41B358B07005AA5B5 /* CTLoginViewController.m in Sources */,
 				F011982C1B355EB100E6AC66 /* Cookies_Time.xcdatamodeld in Sources */,
+				F0CFA49D1B359CA800692362 /* NSDictionary+JSONValidation.m in Sources */,
 				F01198291B355EB100E6AC66 /* AppDelegate.m in Sources */,
+				7978D2A71B3590CA005AA5B5 /* CTTeamsViewController.m in Sources */,
+				F0CFA4981B359C9500692362 /* CTTeam.m in Sources */,
 				F0CFA4811B35813F00692362 /* CTHTTPSessionManager.m in Sources */,
 				F011982F1B355EB100E6AC66 /* ViewController.m in Sources */,
-				F0CFA4901B35935600692362 /* NSDictionary+JSONValidation.m in Sources */,
+				7978D2AF1B359360005AA5B5 /* CTTeamTableViewCell.m in Sources */,
+				F0CFA4991B359C9500692362 /* CTUser.m in Sources */,
 				F0CFA4841B35817700692362 /* CTSettingsManager.m in Sources */,
 				F0CFA4871B3581D300692362 /* CTDataManager.m in Sources */,
-				F0CFA4931B35954B00692362 /* CTTeam.m in Sources */,
-				F0CFA48A1B358F3300692362 /* CTUser.m in Sources */,
 				F01198261B355EB100E6AC66 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
