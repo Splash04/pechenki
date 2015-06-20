@@ -8,6 +8,7 @@
 
 #import "CTTeamsViewController.h"
 #import "CTTeamTableViewCell.h"
+#import "CTTeam.h"
 
 @interface CTTeamsViewController ()
 
@@ -47,9 +48,9 @@
         cell = [[CTTeamTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CTTeamTableViewCell.cellIdentifier];
     }
     
-    cell.name = nil;
-    cell.info = nil;
-    cell.photo = nil;
+    cell.name.text = ((CTTeam *)self.dataArray[indexPath.row]).name;
+    cell.info.text = ((CTTeam *)self.dataArray[indexPath.row]).info;
+    //cell.photo.image = ;
     
     return cell;
 }

@@ -1,4 +1,5 @@
 PODS:
+  - ActionSheetPicker-3.0 (1.5.1)
   - AFNetworking (2.5.4):
     - AFNetworking/NSURLConnection (= 2.5.4)
     - AFNetworking/NSURLSession (= 2.5.4)
@@ -23,10 +24,12 @@ PODS:
   - IQKeyboardManager (3.2.4)
 
 DEPENDENCIES:
+  - ActionSheetPicker-3.0 (~> 1.5.1)
   - AFNetworking (~> 2.0)
   - IQKeyboardManager
 
 SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: de0f71e30495ed0192f7d16d0fddcab6882a0ca3
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   IQKeyboardManager: 555b1231fefafb21b19278d7cca72986a27b748b
 

@@ -5,6 +5,7 @@ target 'Cookies Time' do
 
 pod "AFNetworking", "~> 2.0"
 pod 'IQKeyboardManager'
+pod 'ActionSheetPicker-3.0', '~> 1.5.1'
 
 end
 

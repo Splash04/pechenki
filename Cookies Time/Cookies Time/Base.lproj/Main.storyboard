@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -17,24 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lHV-NV-DHQ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lHV-NV-DHQ">
                                 <rect key="frame" x="16" y="285" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fju-lo-Xi8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fju-lo-Xi8">
                                 <rect key="frame" x="16" y="256" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFf-xe-YIY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZFf-xe-YIY">
                                 <rect key="frame" x="16" y="323" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3cQ-68-LLa">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3cQ-68-LLa">
                                 <rect key="frame" x="16" y="352" width="568" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -44,7 +45,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="68" id="pRO-lb-X2a"/>
                                 </constraints>
-                                <state key="normal" title="Login">
+                                <state key="normal" title="Войти">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -114,7 +115,7 @@
             </objects>
             <point key="canvasLocation" x="360" y="438.75"/>
         </scene>
-        <!--Teams-->
+        <!--Группы-->
         <scene sceneID="vBf-Es-e6N">
             <objects>
                 <viewController id="9Cq-pQ-cjj" customClass="CTTeamsViewController" sceneMemberID="viewController">
@@ -155,13 +156,13 @@
                                                         </mask>
                                                     </variation>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cl-wz-bTS">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cl-wz-bTS">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iO6-Ql-60g">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iO6-Ql-60g">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -226,7 +227,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="Tgb-WJ-bxL"/>
                                 </constraints>
-                                <state key="normal" title="Create team">
+                                <state key="normal" title="Создать группу">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="default">
@@ -285,14 +286,228 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Teams" id="7Wg-Gq-qbk"/>
+                    <navigationItem key="navigationItem" title="Группы" id="7Wg-Gq-qbk">
+                        <barButtonItem key="backBarButtonItem" title="Назад" id="tqp-p1-6XB"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="ZQH-OL-yRO" id="ApM-0w-9Ay"/>
+                        <segue destination="Ad0-hT-Ebj" kind="show" identifier="CTNewTeamViewController" id="lG3-zO-qsa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zoY-MQ-jbR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1815" y="438.75"/>
+        </scene>
+        <!--Новая группа-->
+        <scene sceneID="LAX-qy-fPN">
+            <objects>
+                <viewController id="Ad0-hT-Ebj" customClass="CTNewTeamViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5MU-B5-YWa"/>
+                        <viewControllerLayoutGuide type="bottom" id="8FK-hH-7lU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OsD-6l-xaD">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SlN-nO-H42">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SlN-nO-H42" secondAttribute="height" multiplier="277:157" id="pbI-yx-4xe"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="pbI-yx-4xe"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="pbI-yx-4xe"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RhJ-vp-IzL">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="JYD-YG-VW8"/>
+                                    <constraint firstAttribute="width" constant="83" id="vyR-jU-99D"/>
+                                </constraints>
+                                <state key="normal" title="Камера">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="JYD-YG-VW8"/>
+                                        <exclude reference="vyR-jU-99D"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="JYD-YG-VW8"/>
+                                        <include reference="vyR-jU-99D"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="photoTap:" destination="Ad0-hT-Ebj" eventType="touchUpInside" id="Dck-Xn-PEu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qWa-ft-o4J">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="83" id="Pud-du-p76"/>
+                                    <constraint firstAttribute="height" constant="35" id="ceq-2Q-vFd"/>
+                                </constraints>
+                                <state key="normal" title="Галерея">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Pud-du-p76"/>
+                                        <exclude reference="ceq-2Q-vFd"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Pud-du-p76"/>
+                                        <include reference="ceq-2Q-vFd"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="galleryTap:" destination="Ad0-hT-Ebj" eventType="touchUpInside" id="ndn-Lp-jcJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRP-r9-frg">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="237" width="368" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qwr-6i-4rc">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="266" width="368" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Хэштег:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uG7-Od-btc">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="304" width="368" height="21"/>
+                                </variation>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IK3-0Q-Hlf">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="333" width="368" height="30"/>
+                                </variation>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Описание:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVB-Fo-MMY">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="371" width="368" height="21"/>
+                                </variation>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8aM-g5-3hb">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="400" width="368" height="102"/>
+                                </variation>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ресторан:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKE-cr-rzh">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="510" width="368" height="21"/>
+                                </variation>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="RhJ-vp-IzL" secondAttribute="trailing" constant="16" id="8FS-AF-kid"/>
+                            <constraint firstItem="RhJ-vp-IzL" firstAttribute="top" secondItem="SlN-nO-H42" secondAttribute="top" id="Qa9-Gl-mno"/>
+                            <constraint firstItem="RhJ-vp-IzL" firstAttribute="leading" secondItem="SlN-nO-H42" secondAttribute="trailing" constant="8" id="WGp-WB-Zwn"/>
+                            <constraint firstItem="SlN-nO-H42" firstAttribute="top" secondItem="5MU-B5-YWa" secondAttribute="bottom" constant="8" id="aNQ-Ra-NUD"/>
+                            <constraint firstAttribute="trailing" secondItem="qWa-ft-o4J" secondAttribute="trailing" constant="16" id="bZU-yR-mni"/>
+                            <constraint firstItem="qWa-ft-o4J" firstAttribute="top" secondItem="RhJ-vp-IzL" secondAttribute="bottom" constant="8" id="buc-Ft-u20"/>
+                            <constraint firstItem="SlN-nO-H42" firstAttribute="leading" secondItem="OsD-6l-xaD" secondAttribute="leading" constant="16" id="fuM-Fa-qyQ"/>
+                            <constraint firstItem="qWa-ft-o4J" firstAttribute="leading" secondItem="SlN-nO-H42" secondAttribute="trailing" constant="8" id="mvr-GB-6Le"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="SlN-nO-H42"/>
+                                <exclude reference="RhJ-vp-IzL"/>
+                                <exclude reference="qWa-ft-o4J"/>
+                                <exclude reference="IRP-r9-frg"/>
+                                <exclude reference="Qwr-6i-4rc"/>
+                                <exclude reference="uG7-Od-btc"/>
+                                <exclude reference="IK3-0Q-Hlf"/>
+                                <exclude reference="xVB-Fo-MMY"/>
+                                <exclude reference="8aM-g5-3hb"/>
+                                <exclude reference="OKE-cr-rzh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="aNQ-Ra-NUD"/>
+                                <exclude reference="fuM-Fa-qyQ"/>
+                                <exclude reference="8FS-AF-kid"/>
+                                <exclude reference="Qa9-Gl-mno"/>
+                                <exclude reference="WGp-WB-Zwn"/>
+                                <exclude reference="bZU-yR-mni"/>
+                                <exclude reference="buc-Ft-u20"/>
+                                <exclude reference="mvr-GB-6Le"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="SlN-nO-H42"/>
+                                <include reference="RhJ-vp-IzL"/>
+                                <include reference="qWa-ft-o4J"/>
+                                <include reference="IRP-r9-frg"/>
+                                <include reference="Qwr-6i-4rc"/>
+                                <include reference="uG7-Od-btc"/>
+                                <include reference="IK3-0Q-Hlf"/>
+                                <include reference="xVB-Fo-MMY"/>
+                                <include reference="8aM-g5-3hb"/>
+                                <include reference="OKE-cr-rzh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="aNQ-Ra-NUD"/>
+                                <include reference="fuM-Fa-qyQ"/>
+                                <include reference="8FS-AF-kid"/>
+                                <include reference="Qa9-Gl-mno"/>
+                                <include reference="WGp-WB-Zwn"/>
+                                <include reference="bZU-yR-mni"/>
+                                <include reference="buc-Ft-u20"/>
+                                <include reference="mvr-GB-6Le"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="Новая группа" id="Sxb-b3-Dwf"/>
+                    <connections>
+                        <outlet property="desc" destination="8aM-g5-3hb" id="E4K-vs-fvG"/>
+                        <outlet property="hashtag" destination="IK3-0Q-Hlf" id="HOZ-37-8XV"/>
+                        <outlet property="name" destination="Qwr-6i-4rc" id="2Lh-hJ-BA2"/>
+                        <outlet property="photo" destination="SlN-nO-H42" id="U4U-5e-dbN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6n-cC-VgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2589" y="438.75"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tqn-kM-IrH">
