@@ -21,14 +21,14 @@
 #define kName @"name"
 #define kEmail @"email"
 #define kPhoneNumber @"phone"
-#define kImagePath @"image"
+#define kImagePath @"imageUrl"
 
 // Order
 #define kOrederId @"orderId"
 #define kPrice @"price"
 #define kOrderTeam @"team"
 
-#define kUser @"user"
+#define kUser @"userName"
 #define kPassword @"password"
 
 // Team

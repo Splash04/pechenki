@@ -25,6 +25,7 @@
 + (NSURLSessionDataTask *)loginWithUser:(NSString *)user password:(NSString *)password withResultBlock:(void (^)(CTUser *user, NSError *error))block {
     NSDictionary *parameters = @{kUser : user,
                                  kPassword : password};
+    NSLog(@"Login dictionary: %@", parameters);
     return [[CTHTTPSessionManager sharedInstance] POST:kApiPathLogin parameters:parameters success:^(NSURLSessionDataTask * __unused task, id JSON) {
         
         NSLog(@"loginSuccess: %@", JSON);
@@ -100,6 +101,33 @@
 + (NSURLSessionDataTask *)createTeam:(CTTeam *)team withResultBlock:(void (^)(NSError *error))block {
     
     return [[CTHTTPSessionManager sharedInstance] POST:kApiCreateTeam parameters:[team attributs] success:^(NSURLSessionDataTask * __unused task, id JSON) {
+        NSLog(@"teams: %@", JSON);
+        
+        NSInteger errorCode = [JSON integerForKey:kErrorCode ifNull:-1];
+        
+        if(errorCode != 0) {
+            NSError *error = [self errorWithCode:errorCode errorMessage:[JSON stringForKey:kErrorMessage ifNull:@"Data error"]];
+            if (block) {
+                block(error);
+            }
+        } else {
+            if(block) {
+                block(nil);
+            }
+        }
+    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+        if (block) {
+            block(error);
+        }
+    }];
+}
+
++ (NSURLSessionDataTask *)joinTeam:(CTTeam *)team forUser:(CTUser *)user withResultBlock:(void (^)(NSError *error))block {
+    NSDictionary *parameters = @{@"userId" : @"1",
+                                 @"teamId" : @"1"};
+    //http://10.55.1.27:8888/api/team/join?userId=1&teamId=2
+    NSLog(@"Join team dictionary: %@", parameters);
+    return [[CTHTTPSessionManager sharedInstance] GET:[NSString stringWithFormat:@"team/join?userId=%@&teamId=%@", @"1", @"1"] parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
         NSLog(@"teams: %@", JSON);
         
         NSInteger errorCode = [JSON integerForKey:kErrorCode ifNull:-1];
