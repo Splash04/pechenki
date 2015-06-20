@@ -8,14 +8,17 @@
 
 #import "CTNewTeamViewController.h"
 #import "ActionSheetStringPicker.h"
+#import "Constants.h"
 
 @interface CTNewTeamViewController ()
 
+@property (strong, nonatomic) NSMutableArray *restaurants;
 @property (strong, nonatomic) IBOutlet UIImageView *photo;
 @property (strong, nonatomic) IBOutlet UITextField *name;
 @property (strong, nonatomic) IBOutlet UITextField *hashtag;
 @property (strong, nonatomic) IBOutlet UITextView *desc;
 @property (strong, nonatomic) IBOutlet UIPickerView *restaurantPicker;
+@property (strong, nonatomic) IBOutlet UITextField *restaurant;
 
 @end
 
@@ -24,6 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.restaurants = [[NSMutableArray alloc] initWithObjects:RESTAURANT_LIDO, nil];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,28 +36,73 @@
 }
 
 - (IBAction)photoTap:(id)sender {
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
+    
+    pickerController.delegate = self;
+    
+    pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:pickerController animated:YES completion:nil];
+    
 }
 
 - (IBAction)galleryTap:(id)sender {
+    UIImagePickerController *pickerController = [[UIImagePickerController alloc] init];
+    
+    pickerController.delegate = self;
+    
+    pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    
+    [self presentViewController:pickerController animated:YES completion:nil];
 }
 
-- (void)showCalendarPicker
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+//    UIImage *originalImage = nil, *editedImage = nil, *imageToUse = nil;
+//    
+//    editedImage = (UIImage *) [info objectForKey:UIImagePickerControllerEditedImage];
+//    originalImage = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
+//    
+//    if (editedImage) {
+//        imageToUse = editedImage;
+//    } else {
+//        imageToUse = originalImage;
+//    }
+//    
+//    // Save original photo
+//    NSDate *dateToday = [NSDate date];
+//    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+//    [format setDateFormat:@"yyyyMMdd_HHmmss"];
+//    NSString *uniqueName = [format stringFromDate:dateToday];
+//    [format release];
+//    
+//    NSString *photoName = [PMFileTools saveImage:imageToUse withUniqueName:uniqueName];
+//    
+//    // Resize and save mini photo
+//    NSString *miniPhotoName = [PMFileTools saveMiniImage:imageToUse withUniqueName:uniqueName];
+//    
+//    [picker dismissViewControllerAnimated:YES completion:nil];
+//    
+//    PMCDPhotoLink *photoLink = (PMCDPhotoLink *)[[[NSManagedObject alloc] initWithEntity:[PMCDManager getEntityDescForPhotoLink] insertIntoManagedObjectContext:nil] autorelease];
+//    photoLink.pathPhoto = photoName;
+//    photoLink.pathMiniPhoto = miniPhotoName;
+//    
+//    [self.imagesViewController addImageToArray:photoLink toEndList:YES];
+    
+}
+
+- (void)showRestaurantPicker
 {
-    [ActionSheetStringPicker showPickerWithTitle:@"Select date"
-                                datePickerMode:UIDatePickerModeDate
-                                  selectedDate:self.date
-                                     doneBlock:^(ActionSheetDatePicker *picker, id selectedDate, id origin) {
-                                         self.date = [ISDataManager useSameTimeAsDate:self.date butOnADifferentDate:selectedDate];
-                                         NSLog(@"Picker: %@", picker);
-                                         NSLog(@"Selected date: %@", selectedDate);
-                                         NSLog(@"Selected origin: %@", origin);
-                                         [self.calendarIconView setSelected:NO];
-                                     } cancelBlock:^(ActionSheetDatePicker *picker) {
-                                         NSLog(@"Block Picker Canceled");
-                                         [self.calendarIconView setSelected:NO];
-                                     } origin:self];
+    [ActionSheetStringPicker showPickerWithTitle:PICKER_TITLE rows:self.restaurants initialSelection:0 doneBlock:
+     ^(ActionSheetStringPicker *picker, NSInteger selectedIndex, id selectedValue) {
+         self.restaurant.text = self.restaurants[selectedIndex];
+     } cancelBlock:^(ActionSheetStringPicker *picker) {
+         
+     } origin:self];
 }
 
+- (IBAction)restaurantChoice:(id)sender {
+    [self showRestaurantPicker];
+}
 
 
 @end

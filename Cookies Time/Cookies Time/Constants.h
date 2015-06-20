@@ -9,5 +9,10 @@
 #ifndef Constants_h
 #define Constants_h
 
+#define PICKER_TITLE @"Выбор ресторана"
+
+#pragma mark restaurants
+#define RESTAURANT_LIDO @"Лидо"
+
 
 #endif /* Constants_h */

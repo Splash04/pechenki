@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CTNewTeamViewController : UIViewController
+@interface CTNewTeamViewController : UIViewController <UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
 @end
