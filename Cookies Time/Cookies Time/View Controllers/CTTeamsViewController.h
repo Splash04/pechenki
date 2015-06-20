@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CTBaseViewController.h"
 
-@interface CTTeamsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface CTTeamsViewController : CTBaseViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end

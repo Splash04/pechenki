@@ -9,7 +9,7 @@
 #ifndef CTServerConstants_h
 #define CTServerConstants_h
 
-#define kServerAddress @"http://10.55.1.27:9999/api"
+#define kServerAddress @"http://10.55.1.27:8888/api"
 
 //Basic keys
 #define kErrorCode @"errorCode"

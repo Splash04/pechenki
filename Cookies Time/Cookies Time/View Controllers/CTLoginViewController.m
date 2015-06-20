@@ -31,6 +31,8 @@
 - (IBAction)loginTap:(id)sender {
     self.login.text;
     self.password.text;
+    
+    //[self performSegueWithIdentifier:SEGUE_DETAIL_INFO sender: self];
 }
 
 /*

@@ -9,6 +9,9 @@
 #import "CTTeamsViewController.h"
 #import "CTTeamTableViewCell.h"
 #import "CTTeam.h"
+#import "CTDataManager.h"
+#import "UIRefreshControl+AFNetworking.h"
+#import "UIAlertView+AFNetworking.h"
 
 @interface CTTeamsViewController ()
 
@@ -22,6 +25,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSURLSessionTask *task = [CTDataManager getAllTeamsWithResultBlock:^(NSArray *teams, NSError *error) {
+        if (!error) {
+            self.dataArray = [teams mutableCopy];
+            [self.tableView reloadData];
+        }
+        else {
+            NSLog(@"Error: %@", error);
+        }
+
+    }];
+    
+    [UIAlertView showAlertViewForTaskWithErrorOnCompletion:task delegate:nil];
+//    [self.tableView.refreshControl setRefreshingWithStateOfTask:task];
+
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
