@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D7A6B19298D48427F3FF14B /* libPods-Cookies Time.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D8B438F63D5B4A1750C22710 /* libPods-Cookies Time.a */; };
 		F01198261B355EB100E6AC66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F01198251B355EB100E6AC66 /* main.m */; };
 		F01198291B355EB100E6AC66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F01198281B355EB100E6AC66 /* AppDelegate.m */; };
 		F011982C1B355EB100E6AC66 /* Cookies_Time.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F011982A1B355EB100E6AC66 /* Cookies_Time.xcdatamodeld */; };
@@ -14,9 +15,16 @@
 		F01198321B355EB100E6AC66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01198301B355EB100E6AC66 /* Main.storyboard */; };
 		F01198341B355EB100E6AC66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F01198331B355EB100E6AC66 /* Images.xcassets */; };
 		F01198371B355EB100E6AC66 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01198351B355EB100E6AC66 /* LaunchScreen.xib */; };
+		F0CFA47E1B3580CA00692362 /* CTBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA47D1B3580CA00692362 /* CTBaseViewController.m */; };
+		F0CFA4811B35813F00692362 /* CTHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4801B35813F00692362 /* CTHTTPSessionManager.m */; };
+		F0CFA4841B35817700692362 /* CTSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4831B35817700692362 /* CTSettingsManager.m */; };
+		F0CFA4871B3581D300692362 /* CTDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4861B3581D300692362 /* CTDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48618A33788FBA24165E2410 /* Pods-Cookies Time.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cookies Time.release.xcconfig"; path = "Pods/Target Support Files/Pods-Cookies Time/Pods-Cookies Time.release.xcconfig"; sourceTree = "<group>"; };
+		D8B438F63D5B4A1750C22710 /* libPods-Cookies Time.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Cookies Time.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB09538F27FA6687E4387ED8 /* Pods-Cookies Time.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Cookies Time.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Cookies Time/Pods-Cookies Time.debug.xcconfig"; sourceTree = "<group>"; };
 		F01198201B355EB100E6AC66 /* Cookies Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cookies Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F01198241B355EB100E6AC66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F01198251B355EB100E6AC66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -28,6 +36,14 @@
 		F01198311B355EB100E6AC66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F01198331B355EB100E6AC66 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		F01198361B355EB100E6AC66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F0CFA47C1B3580CA00692362 /* CTBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBaseViewController.h; sourceTree = "<group>"; };
+		F0CFA47D1B3580CA00692362 /* CTBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBaseViewController.m; sourceTree = "<group>"; };
+		F0CFA47F1B35813F00692362 /* CTHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTHTTPSessionManager.h; sourceTree = "<group>"; };
+		F0CFA4801B35813F00692362 /* CTHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTHTTPSessionManager.m; sourceTree = "<group>"; };
+		F0CFA4821B35817700692362 /* CTSettingsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTSettingsManager.h; sourceTree = "<group>"; };
+		F0CFA4831B35817700692362 /* CTSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSettingsManager.m; sourceTree = "<group>"; };
+		F0CFA4851B3581D300692362 /* CTDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTDataManager.h; sourceTree = "<group>"; };
+		F0CFA4861B3581D300692362 /* CTDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D7A6B19298D48427F3FF14B /* libPods-Cookies Time.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF84F4AE36CD3444C2B13BC4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB09538F27FA6687E4387ED8 /* Pods-Cookies Time.debug.xcconfig */,
+				48618A33788FBA24165E2410 /* Pods-Cookies Time.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B7CFCE32E7DE0CC87A698D06 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8B438F63D5B4A1750C22710 /* libPods-Cookies Time.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F01198171B355EB100E6AC66 = {
 			isa = PBXGroup;
 			children = (
 				F01198221B355EB100E6AC66 /* Cookies Time */,
 				F01198211B355EB100E6AC66 /* Products */,
+				AF84F4AE36CD3444C2B13BC4 /* Pods */,
+				B7CFCE32E7DE0CC87A698D06 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +96,9 @@
 		F01198221B355EB100E6AC66 /* Cookies Time */ = {
 			isa = PBXGroup;
 			children = (
+				F0CFA46C1B3580A300692362 /* View Controllers */,
+				F0CFA4771B3580A300692362 /* Models */,
+				F0CFA47B1B3580A300692362 /* Views */,
 				F01198271B355EB100E6AC66 /* AppDelegate.h */,
 				F01198281B355EB100E6AC66 /* AppDelegate.m */,
 				F011982D1B355EB100E6AC66 /* ViewController.h */,
@@ -82,6 +121,139 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F0CFA46C1B3580A300692362 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0CFA46D1B3580A300692362 /* History */,
+				F0CFA46E1B3580A300692362 /* Login */,
+				F0CFA46F1B3580A300692362 /* Main */,
+				F0CFA4701B3580A300692362 /* New Team */,
+				F0CFA4711B3580A300692362 /* Order */,
+				F0CFA4721B3580A300692362 /* Payment */,
+				F0CFA4731B3580A300692362 /* Payment Info */,
+				F0CFA4741B3580A300692362 /* People list */,
+				F0CFA4751B3580A300692362 /* Team Details */,
+				F0CFA4761B3580A300692362 /* Teams */,
+				F0CFA47C1B3580CA00692362 /* CTBaseViewController.h */,
+				F0CFA47D1B3580CA00692362 /* CTBaseViewController.m */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F0CFA46D1B3580A300692362 /* History */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		F0CFA46E1B3580A300692362 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		F0CFA46F1B3580A300692362 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		F0CFA4701B3580A300692362 /* New Team */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Team";
+			sourceTree = "<group>";
+		};
+		F0CFA4711B3580A300692362 /* Order */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Order;
+			sourceTree = "<group>";
+		};
+		F0CFA4721B3580A300692362 /* Payment */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Payment;
+			sourceTree = "<group>";
+		};
+		F0CFA4731B3580A300692362 /* Payment Info */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Payment Info";
+			sourceTree = "<group>";
+		};
+		F0CFA4741B3580A300692362 /* People list */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "People list";
+			sourceTree = "<group>";
+		};
+		F0CFA4751B3580A300692362 /* Team Details */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Team Details";
+			sourceTree = "<group>";
+		};
+		F0CFA4761B3580A300692362 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		F0CFA4771B3580A300692362 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F0CFA4781B3580A300692362 /* Data models */,
+				F0CFA4791B3580A300692362 /* Database */,
+				F0CFA47A1B3580A300692362 /* Managers */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F0CFA4781B3580A300692362 /* Data models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Data models";
+			sourceTree = "<group>";
+		};
+		F0CFA4791B3580A300692362 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		F0CFA47A1B3580A300692362 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F0CFA47F1B35813F00692362 /* CTHTTPSessionManager.h */,
+				F0CFA4801B35813F00692362 /* CTHTTPSessionManager.m */,
+				F0CFA4821B35817700692362 /* CTSettingsManager.h */,
+				F0CFA4831B35817700692362 /* CTSettingsManager.m */,
+				F0CFA4851B3581D300692362 /* CTDataManager.h */,
+				F0CFA4861B3581D300692362 /* CTDataManager.m */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F0CFA47B1B3580A300692362 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +261,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F01198461B355EB100E6AC66 /* Build configuration list for PBXNativeTarget "Cookies Time" */;
 			buildPhases = (
+				954A51D363B43576DCAFB626 /* Check Pods Manifest.lock */,
 				F011981C1B355EB100E6AC66 /* Sources */,
 				F011981D1B355EB100E6AC66 /* Frameworks */,
 				F011981E1B355EB100E6AC66 /* Resources */,
+				8D706C55379FB7FA6F8621AF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -147,14 +321,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8D706C55379FB7FA6F8621AF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cookies Time/Pods-Cookies Time-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		954A51D363B43576DCAFB626 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F011981C1B355EB100E6AC66 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CFA47E1B3580CA00692362 /* CTBaseViewController.m in Sources */,
 				F011982C1B355EB100E6AC66 /* Cookies_Time.xcdatamodeld in Sources */,
 				F01198291B355EB100E6AC66 /* AppDelegate.m in Sources */,
+				F0CFA4811B35813F00692362 /* CTHTTPSessionManager.m in Sources */,
 				F011982F1B355EB100E6AC66 /* ViewController.m in Sources */,
+				F0CFA4841B35817700692362 /* CTSettingsManager.m in Sources */,
+				F0CFA4871B3581D300692362 /* CTDataManager.m in Sources */,
 				F01198261B355EB100E6AC66 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,8 +474,10 @@
 		};
 		F01198471B355EB100E6AC66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB09538F27FA6687E4387ED8 /* Pods-Cookies Time.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Cookies Time/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -273,8 +486,10 @@
 		};
 		F01198481B355EB100E6AC66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48618A33788FBA24165E2410 /* Pods-Cookies Time.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "Cookies Time/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
