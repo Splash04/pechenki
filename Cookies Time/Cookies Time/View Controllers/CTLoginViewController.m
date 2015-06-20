@@ -30,11 +30,18 @@
 
 
 - (IBAction)loginTap:(id)sender {
-    self.login.text;
-    self.password.text;
+    [self showProgress];
     
-    
-    [self performSegueWithIdentifier:[CTTeamsViewController segueIdentifier] sender: self];
+    [CTDataManager loginWithUser:@"igor.kharitoniuk" password:@"1427booM02" withResultBlock:^(CTUser *user, NSError *error) {
+        [self hideProgress];
+        if(error != nil) {
+            NSLog(@"Login error: %@", error);
+            [self showAlert:@"Login error"];
+        } else {
+            [CTSession sharedInstance].user = user;
+            [self performSegueWithIdentifier:[CTTeamsViewController segueIdentifier] sender: self];
+        }
+    }];
 }
 
 /*

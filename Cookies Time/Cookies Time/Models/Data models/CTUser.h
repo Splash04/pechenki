@@ -15,7 +15,10 @@
 @property (nonatomic, strong) NSString *email;
 @property (nonatomic, strong) NSString *imagePath;
 @property (nonatomic, strong) NSString *phoneNumber;
+@property (nonatomic, strong) NSString *firstName;
+@property (nonatomic, strong) NSString *lastName;
 
 - (instancetype)initWithAttributes:(NSDictionary *)attributes;
+- (NSMutableDictionary *)attributs;
 
 @end

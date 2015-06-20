@@ -21,23 +21,43 @@
 #define kName @"name"
 #define kEmail @"email"
 #define kPhoneNumber @"phone"
-#define kImagePath @"image"
+#define kImagePath @"imageUrl"
 
-#define kUser @"user"
+// Order
+#define kOrederId @"orderId"
+#define kPrice @"price"
+#define kOrderTeam @"team"
+
+#define kUser @"userName"
 #define kPassword @"password"
 
 // Team
+#define kTeam @"team"
 #define kTeamIdentifier @"teamId"
 #define kInfo @"info"
 #define kTag @"tag"
 
-#define kSessionId "sessionId"
+// Product ID
 
+#define kSessionId @"sessionId"
+#define kProductWeight @"productWeight"
+#define kCategory @"category"
+#define kCategoryId @"categoryId"
+
+// User Order
+#define kProducts @"products"
+
+// Restaurant
+#define kRestaurantId @"restaurantId"
+#define kRestaurantAddress @"restaurantAddress"
 
 //Api Pathes
 
 #define kApiPathLogin @"login"
 #define kApiPathTeams @"team"
-#define kCreateTeam @"create_team"
+#define kApiCreateTeam @"create_team"
+#define kApiUpdateUserOrder @"user_order"
+#define kGetCategories @"category\\getbyrestaurant"
+#define kGetProducts @"product\\getbycategory"
 
 #endif /* CTServerConstants_h */

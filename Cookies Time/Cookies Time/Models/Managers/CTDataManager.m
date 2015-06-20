@@ -25,6 +25,7 @@
 + (NSURLSessionDataTask *)loginWithUser:(NSString *)user password:(NSString *)password withResultBlock:(void (^)(CTUser *user, NSError *error))block {
     NSDictionary *parameters = @{kUser : user,
                                  kPassword : password};
+    NSLog(@"Login dictionary: %@", parameters);
     return [[CTHTTPSessionManager sharedInstance] POST:kApiPathLogin parameters:parameters success:^(NSURLSessionDataTask * __unused task, id JSON) {
         
         NSLog(@"loginSuccess: %@", JSON);
@@ -99,7 +100,7 @@
 
 + (NSURLSessionDataTask *)createTeam:(CTTeam *)team withResultBlock:(void (^)(NSError *error))block {
     
-    return [[CTHTTPSessionManager sharedInstance] POST:kCreateTeam parameters:[team attributs] success:^(NSURLSessionDataTask * __unused task, id JSON) {
+    return [[CTHTTPSessionManager sharedInstance] POST:kApiCreateTeam parameters:[team attributs] success:^(NSURLSessionDataTask * __unused task, id JSON) {
         NSLog(@"teams: %@", JSON);
         
         NSInteger errorCode = [JSON integerForKey:kErrorCode ifNull:-1];
@@ -117,6 +118,122 @@
     } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
         if (block) {
             block(error);
+        }
+    }];
+}
+
++ (NSURLSessionDataTask *)joinTeam:(CTTeam *)team forUser:(CTUser *)user withResultBlock:(void (^)(NSError *error))block {
+    NSDictionary *parameters = @{@"userId" : @"1",
+                                 @"teamId" : @"1"};
+    //http://10.55.1.27:8888/api/team/join?userId=1&teamId=2
+    NSLog(@"Join team dictionary: %@", parameters);
+    return [[CTHTTPSessionManager sharedInstance] GET:[NSString stringWithFormat:@"team/join?userId=%@&teamId=%@", @"1", @"1"] parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
+        NSLog(@"teams: %@", JSON);
+        
+        NSInteger errorCode = [JSON integerForKey:kErrorCode ifNull:-1];
+        
+        if(errorCode != 0) {
+            NSError *error = [self errorWithCode:errorCode errorMessage:[JSON stringForKey:kErrorMessage ifNull:@"Data error"]];
+            if (block) {
+                block(error);
+            }
+        } else {
+            if(block) {
+                block(nil);
+            }
+        }
+    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+        if (block) {
+            block(error);
+        }
+    }];
+}
+
++ (NSURLSessionDataTask *)createUserOrder:(CTUserOrder *)userOrder withResultBlock:(void (^)(NSError *error))block {
+    return [[CTHTTPSessionManager sharedInstance] POST:kApiUpdateUserOrder parameters:[userOrder attributs] success:^(NSURLSessionDataTask * __unused task, id JSON) {
+        NSLog(@"UserOrder success: %@", JSON);
+        
+        NSInteger errorCode = [JSON integerForKey:kErrorCode ifNull:-1];
+        
+        if(errorCode != 0) {
+            NSError *error = [self errorWithCode:errorCode errorMessage:[JSON stringForKey:kErrorMessage ifNull:@"Data error"]];
+            if (block) {
+                block(error);
+            }
+        } else {
+            if(block) {
+                block(nil);
+            }
+        }
+    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+        if (block) {
+            block(error);
+        }
+    }];
+}
+
++ (NSURLSessionDataTask *)getProductCategoryForRestaurant:(CTRestaurant *)restaurant withResultBlock:(void (^)(NSArray *categories, NSError *error))block {
+    return [[CTHTTPSessionManager sharedInstance] GET:[NSString stringWithFormat:@"%@?%@=%@", kGetCategories, kRestaurantId, restaurant.restaurantId] parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
+        NSLog(@"ProductCategoryForRestaurant success: %@", JSON);
+        
+        NSInteger errorCode = [JSON integerForKey:kErrorCode ifNull:-1];
+        NSString *dataType = [JSON stringForKey:kDataType ifNull:nil];
+        if([dataType length] == 0) {
+            errorCode = -2;
+        }
+        
+        if(errorCode != 0) {
+            NSError *error = [self errorWithCode:errorCode errorMessage:[JSON stringForKey:kErrorMessage ifNull:@"Data error"]];
+            if (block) {
+                block(nil, error);
+            }
+        } else {
+            if(block) {
+                NSArray *dataArray = [JSON objectForKey:dataType ifNull:nil];
+                NSMutableArray *categoriesArray = [NSMutableArray arrayWithCapacity:[dataArray count]];
+                for (NSDictionary *attributes in dataArray) {
+                    CTCategory *category = [[CTCategory alloc] initWithAttributes:attributes];
+                    [categoriesArray addObject:category];
+                }
+                block(categoriesArray, nil);
+            }
+        }
+    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+        if (block) {
+            block(nil, error);
+        }
+    }];
+}
+
++ (NSURLSessionDataTask *)getProductsForCategory:(CTCategory *)category withResultBlock:(void (^)(NSArray *products, NSError *error))block {
+    return [[CTHTTPSessionManager sharedInstance] GET:[NSString stringWithFormat:@"%@?%@=%@", kGetProducts, kCategoryId, category.identifier] parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
+        NSLog(@"ProductsForCategory success: %@", JSON);
+        
+        NSInteger errorCode = [JSON integerForKey:kErrorCode ifNull:-1];
+        NSString *dataType = [JSON stringForKey:kDataType ifNull:nil];
+        if([dataType length] == 0) {
+            errorCode = -2;
+        }
+        
+        if(errorCode != 0) {
+            NSError *error = [self errorWithCode:errorCode errorMessage:[JSON stringForKey:kErrorMessage ifNull:@"Data error"]];
+            if (block) {
+                block(nil, error);
+            }
+        } else {
+            if(block) {
+                NSArray *dataArray = [JSON objectForKey:dataType ifNull:nil];
+                NSMutableArray *productsArray = [NSMutableArray arrayWithCapacity:[dataArray count]];
+                for (NSDictionary *attributes in dataArray) {
+                    CTProduct *product = [[CTProduct alloc] initWithAttributes:attributes];
+                    [productsArray addObject:product];
+                }
+                block(productsArray, nil);
+            }
+        }
+    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+        if (block) {
+            block(nil, error);
         }
     }];
 }

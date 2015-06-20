@@ -36,6 +36,20 @@
     return aValue;
 }
 
+- (double)doubleForKey:(id)aKey ifNull:(double)aValue
+{
+    if (!aKey) return aValue;
+    
+    id result = [self objectForKey:aKey];
+    if ([result isKindOfClass:[NSNumber class]] || [result isKindOfClass:[NSString class]])
+    {
+        double value = [result doubleValue];
+        if (!isnan(value)) return value;
+    }
+    
+    return aValue;
+}
+
 - (id)objectForKey:(id)aKey ifNull:(id)aObject
 {
     id result = [self objectForKey:aKey];

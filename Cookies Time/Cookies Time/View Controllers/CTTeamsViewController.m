@@ -38,8 +38,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    [self showProgress];
     NSURLSessionTask *task = [CTDataManager getAllTeamsWithResultBlock:^(NSArray *teams, NSError *error) {
+        [self hideProgress];
         if (!error) {
             self.dataArray = [teams mutableCopy];
             [self.tableView reloadData];

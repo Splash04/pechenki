@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MBProgressHUD.h"
+#import "CTDataManager.h"
+#import "CTSession.h"
 
 @interface CTBaseViewController : UIViewController
+
+- (void)showProgress;
+- (void)hideProgress;
+- (void)showAlert:(NSString *)message;
 
 @end
