@@ -17,10 +17,14 @@
 #define kDataType @"dataType"
 
 // User
+#define kUserId @"userId"
 #define kName @"name"
 #define kEmail @"email"
 #define kPhoneNumber @"phone"
 #define kImagePath @"image"
+
+#define kUser @"user"
+#define kPassword @"password"
 
 // Team
 #define kTeamIdentifier @"teamId"
@@ -33,5 +37,7 @@
 //Api Pathes
 
 #define kApiPathLogin @"login"
+#define kApiPathTeams @"team"
+#define kCreateTeam @"create_team"
 
 #endif /* CTServerConstants_h */

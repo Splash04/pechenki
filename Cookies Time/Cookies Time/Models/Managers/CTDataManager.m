@@ -23,11 +23,13 @@
 }
 
 + (NSURLSessionDataTask *)loginWithUser:(NSString *)user password:(NSString *)password withResultBlock:(void (^)(CTUser *user, NSError *error))block{
-    return [[CTHTTPSessionManager sharedInstance] GET:kApiPathLogin parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
+    NSDictionary *parameters = @{kUser : user,
+                                 kPassword : password};
+    return [[CTHTTPSessionManager sharedInstance] POST:kApiPathLogin parameters:parameters success:^(NSURLSessionDataTask * __unused task, id JSON) {
+        
         NSLog(@"loginSuccess: %@", JSON);
         
         NSInteger errorCode = [JSON integerForKey:kErrorCode ifNull:-1];
-        
         NSString *dataType = [JSON stringForKey:kDataType ifNull:nil];
         if([dataType length] == 0) {
             errorCode = -2;
@@ -47,6 +49,74 @@
     } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
         if (block) {
             block(nil, error);
+        }
+    }];
+}
+
++ (NSURLSessionDataTask *)getAllTeamsWithResultBlock:(void (^)(NSArray *teams, NSError *error))block{
+    return [self getTeamsForUser:nil withResultBlock:block];
+}
+
++ (NSURLSessionDataTask *)getTeamsForUser:(CTUser *)user withResultBlock:(void (^)(NSArray *teams, NSError *error))block{
+    NSString *apiPath = nil;
+    if(user != nil) {
+        apiPath = [NSString stringWithFormat:@"%@\\%@=%@", kApiPathTeams, kUserId, user.identifier];
+    } else {
+        apiPath = kApiPathTeams;
+    }
+    NSLog(@"get team: %@", apiPath);
+    return [[CTHTTPSessionManager sharedInstance] GET:apiPath parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
+        NSLog(@"teams: %@", JSON);
+        
+        NSInteger errorCode = [JSON integerForKey:kErrorCode ifNull:-1];
+        NSString *dataType = [JSON stringForKey:kDataType ifNull:nil];
+        if([dataType length] == 0) {
+            errorCode = -2;
+        }
+        
+        if(errorCode != 0) {
+            NSError *error = [self errorWithCode:errorCode errorMessage:[JSON stringForKey:kErrorMessage ifNull:@"Data error"]];
+            if (block) {
+                block(nil, error);
+            }
+        } else {
+            if(block) {
+                NSArray *dataArray = [JSON objectForKey:dataType ifNull:nil];
+                NSMutableArray *teamsArray = [NSMutableArray arrayWithCapacity:[dataArray count]];
+                for (NSDictionary *attributes in teamsArray) {
+                    CTTeam *team = [[CTTeam alloc] initWithAttributes:attributes];
+                    [teamsArray addObject:team];
+                }
+                block(teamsArray, nil);
+            }
+        }
+    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+        if (block) {
+            block(nil, error);
+        }
+    }];
+}
+
++ (NSURLSessionDataTask *)createTeam:(CTTeam *)team withResultBlock:(void (^)(NSError *error))block{
+    
+    return [[CTHTTPSessionManager sharedInstance] POST:kCreateTeam parameters:[team attributs] success:^(NSURLSessionDataTask * __unused task, id JSON) {
+        NSLog(@"teams: %@", JSON);
+        
+        NSInteger errorCode = [JSON integerForKey:kErrorCode ifNull:-1];
+        
+        if(errorCode != 0) {
+            NSError *error = [self errorWithCode:errorCode errorMessage:[JSON stringForKey:kErrorMessage ifNull:@"Data error"]];
+            if (block) {
+                block(error);
+            }
+        } else {
+            if(block) {
+                block(nil);
+            }
+        }
+    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+        if (block) {
+            block(error);
         }
     }];
 }

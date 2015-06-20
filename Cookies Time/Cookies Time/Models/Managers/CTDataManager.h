@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "CTUser.h"
+#import "CTTeam.h"
 
 @interface CTDataManager : NSObject
 

@@ -14,4 +14,6 @@
 - (NSInteger)integerForKey:(id)aKey ifNull:(NSInteger)aValue;
 - (id)objectForKey:(id)aKey ifNull:(id)aObject;
 
+- (void)safeSetValue:(id)value forKey:(NSString *)key;
+
 @end

@@ -23,6 +23,7 @@
         self.email = [attributes stringForKey:kEmail ifNull:nil];
         self.phoneNumber = [attributes stringForKey:kPhoneNumber ifNull:nil];
         self.imagePath = [attributes stringForKey:kImagePath ifNull:nil];
+        self.identifier = [attributes stringForKey:kUserId ifNull:nil];
     } else {
         NSLog(@"User data is empty");
     }

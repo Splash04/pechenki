@@ -51,4 +51,13 @@
     return nil;
 }
 
+- (void)safeSetValue:(nullable id)value forKey:(nonnull NSString *)key
+{
+    if(value != nil) {
+        [self setValue:value forKey:key];
+    } else {
+        NSLog(@"Value for key %@ is Null", key);
+    }
+}
+
 @end

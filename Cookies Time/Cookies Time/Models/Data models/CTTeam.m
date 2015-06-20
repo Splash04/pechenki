@@ -17,14 +17,29 @@
     if (!self) {
         return nil;
     }
-    
-    self.identifier = [attributes stringForKey:kTeamIdentifier ifNull:nil];
-    self.name = [attributes stringForKey:kName ifNull:nil];
-    self.imagePath = [attributes stringForKey:kImagePath ifNull:nil];
-    self.tag = [attributes stringForKey:kTag ifNull:nil];
-    self.info = [attributes stringForKey:kInfo ifNull:nil];
+    if(attributes != nil) {
+        self.identifier = [attributes stringForKey:kTeamIdentifier ifNull:nil];
+        self.name = [attributes stringForKey:kName ifNull:nil];
+        self.imagePath = [attributes stringForKey:kImagePath ifNull:nil];
+        self.tag = [attributes stringForKey:kTag ifNull:nil];
+        self.info = [attributes stringForKey:kInfo ifNull:nil];
+    } else {
+        NSLog(@"Team data is empty");
+    }
     
     return self;
+}
+
+- (NSMutableDictionary *)attributs {
+    NSMutableDictionary *dictionary = [NSMutableDictionary new];
+    
+    [dictionary safeSetValue:self.identifier forKey:kTeamIdentifier];
+    [dictionary safeSetValue:self.name forKey:kName];
+    [dictionary safeSetValue:self.imagePath forKey:kImagePath];
+    [dictionary safeSetValue:self.tag forKey:kTag];
+    [dictionary safeSetValue:self.info forKey:kInfo];
+    
+    return dictionary;
 }
 
 @end

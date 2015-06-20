@@ -16,4 +16,7 @@
 @property (nonatomic, strong) NSString *tag;
 @property (nonatomic, strong) NSString *info;
 
+- (instancetype)initWithAttributes:(NSDictionary *)attributes;
+- (NSMutableDictionary *)attributs;
+
 @end
