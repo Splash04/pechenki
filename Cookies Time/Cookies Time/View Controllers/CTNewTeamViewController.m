@@ -56,7 +56,7 @@
     
     pickerController.delegate = self;
     
-    pickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    pickerController.sourceType = UIImagePickerControllerSourceTypeCamera;
     
     [self presentViewController:pickerController animated:YES completion:nil];
     

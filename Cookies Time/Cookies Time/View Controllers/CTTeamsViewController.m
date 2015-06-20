@@ -13,11 +13,13 @@
 #import "UIRefreshControl+AFNetworking.h"
 #import "UIAlertView+AFNetworking.h"
 #import "CTNewTeamViewController.h"
+#import "CTTeamDetailsViewController.h"
 
 @interface CTTeamsViewController ()
 
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) NSMutableArray *dataArray;
+@property (strong, nonatomic) CTTeam *currentTeam;
 
 @end
 
@@ -80,6 +82,19 @@
     //cell.photo.image = ;
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.currentTeam = self.dataArray[indexPath.row];
+    [self performSegueWithIdentifier:[CTTeamDetailsViewController segueIdentifier] sender: self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:[CTTeamDetailsViewController segueIdentifier]]) {
+        CTTeamDetailsViewController *teamDetailViewController = [segue destinationViewController];
+        teamDetailViewController.team = self.currentTeam;
+    }
+
 }
 
 @end
