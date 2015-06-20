@@ -22,7 +22,7 @@
     return sharedInstance;
 }
 
-+ (NSURLSessionDataTask *)loginWithUser:(NSString *)user password:(NSString *)password withResultBlock:(void (^)(CTUser *user, NSError *error))block{
++ (NSURLSessionDataTask *)loginWithUser:(NSString *)user password:(NSString *)password withResultBlock:(void (^)(CTUser *user, NSError *error))block {
     NSDictionary *parameters = @{kUser : user,
                                  kPassword : password};
     return [[CTHTTPSessionManager sharedInstance] POST:kApiPathLogin parameters:parameters success:^(NSURLSessionDataTask * __unused task, id JSON) {
@@ -53,11 +53,11 @@
     }];
 }
 
-+ (NSURLSessionDataTask *)getAllTeamsWithResultBlock:(void (^)(NSArray *teams, NSError *error))block{
++ (NSURLSessionDataTask *)getAllTeamsWithResultBlock:(void (^)(NSArray *teams, NSError *error))block {
     return [self getTeamsForUser:nil withResultBlock:block];
 }
 
-+ (NSURLSessionDataTask *)getTeamsForUser:(CTUser *)user withResultBlock:(void (^)(NSArray *teams, NSError *error))block{
++ (NSURLSessionDataTask *)getTeamsForUser:(CTUser *)user withResultBlock:(void (^)(NSArray *teams, NSError *error))block {
     NSString *apiPath = nil;
     if(user != nil) {
         apiPath = [NSString stringWithFormat:@"%@\\%@=%@", kApiPathTeams, kUserId, user.identifier];
@@ -97,7 +97,7 @@
     }];
 }
 
-+ (NSURLSessionDataTask *)createTeam:(CTTeam *)team withResultBlock:(void (^)(NSError *error))block{
++ (NSURLSessionDataTask *)createTeam:(CTTeam *)team withResultBlock:(void (^)(NSError *error))block {
     
     return [[CTHTTPSessionManager sharedInstance] POST:kCreateTeam parameters:[team attributs] success:^(NSURLSessionDataTask * __unused task, id JSON) {
         NSLog(@"teams: %@", JSON);
