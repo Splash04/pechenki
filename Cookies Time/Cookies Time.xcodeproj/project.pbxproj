@@ -1,0 +1,321 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F01198261B355EB100E6AC66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F01198251B355EB100E6AC66 /* main.m */; };
+		F01198291B355EB100E6AC66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F01198281B355EB100E6AC66 /* AppDelegate.m */; };
+		F011982C1B355EB100E6AC66 /* Cookies_Time.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F011982A1B355EB100E6AC66 /* Cookies_Time.xcdatamodeld */; };
+		F011982F1B355EB100E6AC66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F011982E1B355EB100E6AC66 /* ViewController.m */; };
+		F01198321B355EB100E6AC66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F01198301B355EB100E6AC66 /* Main.storyboard */; };
+		F01198341B355EB100E6AC66 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F01198331B355EB100E6AC66 /* Images.xcassets */; };
+		F01198371B355EB100E6AC66 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F01198351B355EB100E6AC66 /* LaunchScreen.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F01198201B355EB100E6AC66 /* Cookies Time.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Cookies Time.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F01198241B355EB100E6AC66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F01198251B355EB100E6AC66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F01198271B355EB100E6AC66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F01198281B355EB100E6AC66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F011982B1B355EB100E6AC66 /* Cookies_Time.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Cookies_Time.xcdatamodel; sourceTree = "<group>"; };
+		F011982D1B355EB100E6AC66 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		F011982E1B355EB100E6AC66 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F01198311B355EB100E6AC66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F01198331B355EB100E6AC66 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F01198361B355EB100E6AC66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F011981D1B355EB100E6AC66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F01198171B355EB100E6AC66 = {
+			isa = PBXGroup;
+			children = (
+				F01198221B355EB100E6AC66 /* Cookies Time */,
+				F01198211B355EB100E6AC66 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F01198211B355EB100E6AC66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F01198201B355EB100E6AC66 /* Cookies Time.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F01198221B355EB100E6AC66 /* Cookies Time */ = {
+			isa = PBXGroup;
+			children = (
+				F01198271B355EB100E6AC66 /* AppDelegate.h */,
+				F01198281B355EB100E6AC66 /* AppDelegate.m */,
+				F011982D1B355EB100E6AC66 /* ViewController.h */,
+				F011982E1B355EB100E6AC66 /* ViewController.m */,
+				F01198301B355EB100E6AC66 /* Main.storyboard */,
+				F01198331B355EB100E6AC66 /* Images.xcassets */,
+				F01198351B355EB100E6AC66 /* LaunchScreen.xib */,
+				F011982A1B355EB100E6AC66 /* Cookies_Time.xcdatamodeld */,
+				F01198231B355EB100E6AC66 /* Supporting Files */,
+			);
+			path = "Cookies Time";
+			sourceTree = "<group>";
+		};
+		F01198231B355EB100E6AC66 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F01198241B355EB100E6AC66 /* Info.plist */,
+				F01198251B355EB100E6AC66 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F011981F1B355EB100E6AC66 /* Cookies Time */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F01198461B355EB100E6AC66 /* Build configuration list for PBXNativeTarget "Cookies Time" */;
+			buildPhases = (
+				F011981C1B355EB100E6AC66 /* Sources */,
+				F011981D1B355EB100E6AC66 /* Frameworks */,
+				F011981E1B355EB100E6AC66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Cookies Time";
+			productName = "Cookies Time";
+			productReference = F01198201B355EB100E6AC66 /* Cookies Time.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F01198181B355EB100E6AC66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Splash;
+				TargetAttributes = {
+					F011981F1B355EB100E6AC66 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+				};
+			};
+			buildConfigurationList = F011981B1B355EB100E6AC66 /* Build configuration list for PBXProject "Cookies Time" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F01198171B355EB100E6AC66;
+			productRefGroup = F01198211B355EB100E6AC66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F011981F1B355EB100E6AC66 /* Cookies Time */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F011981E1B355EB100E6AC66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F01198321B355EB100E6AC66 /* Main.storyboard in Resources */,
+				F01198371B355EB100E6AC66 /* LaunchScreen.xib in Resources */,
+				F01198341B355EB100E6AC66 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F011981C1B355EB100E6AC66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F011982C1B355EB100E6AC66 /* Cookies_Time.xcdatamodeld in Sources */,
+				F01198291B355EB100E6AC66 /* AppDelegate.m in Sources */,
+				F011982F1B355EB100E6AC66 /* ViewController.m in Sources */,
+				F01198261B355EB100E6AC66 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F01198301B355EB100E6AC66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F01198311B355EB100E6AC66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F01198351B355EB100E6AC66 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F01198361B355EB100E6AC66 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F01198441B355EB100E6AC66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F01198451B355EB100E6AC66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F01198471B355EB100E6AC66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Cookies Time/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F01198481B355EB100E6AC66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Cookies Time/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F011981B1B355EB100E6AC66 /* Build configuration list for PBXProject "Cookies Time" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F01198441B355EB100E6AC66 /* Debug */,
+				F01198451B355EB100E6AC66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F01198461B355EB100E6AC66 /* Build configuration list for PBXNativeTarget "Cookies Time" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F01198471B355EB100E6AC66 /* Debug */,
+				F01198481B355EB100E6AC66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F011982A1B355EB100E6AC66 /* Cookies_Time.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F011982B1B355EB100E6AC66 /* Cookies_Time.xcdatamodel */,
+			);
+			currentVersion = F011982B1B355EB100E6AC66 /* Cookies_Time.xcdatamodel */;
+			path = Cookies_Time.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F01198181B355EB100E6AC66 /* Project object */;
+}
