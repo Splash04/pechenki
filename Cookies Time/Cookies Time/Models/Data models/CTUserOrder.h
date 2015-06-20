@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CTUser.h"
+#import "CTTeam.h"
+#import "CTProduct.h"
 
 @interface CTUserOrder : NSObject
+
+@property (nonatomic, strong) CTUser *user;
+@property (nonatomic, strong) CTTeam *team;
+@property (nonatomic, strong) NSArray *products;
+
+- (NSMutableDictionary *)attributs;
 
 @end

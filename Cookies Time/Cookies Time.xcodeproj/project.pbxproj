@@ -26,6 +26,11 @@
 		F0CFA4981B359C9500692362 /* CTTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4951B359C9500692362 /* CTTeam.m */; };
 		F0CFA4991B359C9500692362 /* CTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4971B359C9500692362 /* CTUser.m */; };
 		F0CFA49D1B359CA800692362 /* NSDictionary+JSONValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA49C1B359CA800692362 /* NSDictionary+JSONValidation.m */; };
+		F0CFA4A21B35C88300692362 /* CTOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4A11B35C88300692362 /* CTOrder.m */; };
+		F0CFA4A51B35CF3F00692362 /* CTProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4A41B35CF3F00692362 /* CTProduct.m */; };
+		F0CFA4A81B35D27A00692362 /* CTCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4A71B35D27A00692362 /* CTCategory.m */; };
+		F0CFA4AB1B35E1D800692362 /* CTUserOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4AA1B35E1D800692362 /* CTUserOrder.m */; };
+		F0CFA4AE1B35EA4600692362 /* CTRestaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4AD1B35EA4600692362 /* CTRestaurant.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +72,16 @@
 		F0CFA49C1B359CA800692362 /* NSDictionary+JSONValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONValidation.m"; sourceTree = "<group>"; };
 		F0CFA49E1B359CAF00692362 /* CTServerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTServerConstants.h; sourceTree = "<group>"; };
 		F0CFA49F1B35AAC100692362 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		F0CFA4A01B35C88300692362 /* CTOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTOrder.h; sourceTree = "<group>"; };
+		F0CFA4A11B35C88300692362 /* CTOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTOrder.m; sourceTree = "<group>"; };
+		F0CFA4A31B35CF3F00692362 /* CTProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTProduct.h; sourceTree = "<group>"; };
+		F0CFA4A41B35CF3F00692362 /* CTProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTProduct.m; sourceTree = "<group>"; };
+		F0CFA4A61B35D27A00692362 /* CTCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCategory.h; sourceTree = "<group>"; };
+		F0CFA4A71B35D27A00692362 /* CTCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCategory.m; sourceTree = "<group>"; };
+		F0CFA4A91B35E1D800692362 /* CTUserOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTUserOrder.h; sourceTree = "<group>"; };
+		F0CFA4AA1B35E1D800692362 /* CTUserOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTUserOrder.m; sourceTree = "<group>"; };
+		F0CFA4AC1B35EA4600692362 /* CTRestaurant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRestaurant.h; sourceTree = "<group>"; };
+		F0CFA4AD1B35EA4600692362 /* CTRestaurant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTRestaurant.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -267,6 +282,16 @@
 				F0CFA4951B359C9500692362 /* CTTeam.m */,
 				F0CFA4961B359C9500692362 /* CTUser.h */,
 				F0CFA4971B359C9500692362 /* CTUser.m */,
+				F0CFA4A01B35C88300692362 /* CTOrder.h */,
+				F0CFA4A11B35C88300692362 /* CTOrder.m */,
+				F0CFA4A31B35CF3F00692362 /* CTProduct.h */,
+				F0CFA4A41B35CF3F00692362 /* CTProduct.m */,
+				F0CFA4A61B35D27A00692362 /* CTCategory.h */,
+				F0CFA4A71B35D27A00692362 /* CTCategory.m */,
+				F0CFA4A91B35E1D800692362 /* CTUserOrder.h */,
+				F0CFA4AA1B35E1D800692362 /* CTUserOrder.m */,
+				F0CFA4AC1B35EA4600692362 /* CTRestaurant.h */,
+				F0CFA4AD1B35EA4600692362 /* CTRestaurant.m */,
 			);
 			path = "Data models";
 			sourceTree = "<group>";
@@ -414,6 +439,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0CFA4A51B35CF3F00692362 /* CTProduct.m in Sources */,
 				F0CFA47E1B3580CA00692362 /* CTBaseViewController.m in Sources */,
 				7978D2A41B358B07005AA5B5 /* CTLoginViewController.m in Sources */,
 				F011982C1B355EB100E6AC66 /* Cookies_Time.xcdatamodeld in Sources */,
@@ -421,12 +447,16 @@
 				F01198291B355EB100E6AC66 /* AppDelegate.m in Sources */,
 				7978D2A71B3590CA005AA5B5 /* CTTeamsViewController.m in Sources */,
 				792C31431B35A0E000148EB2 /* CTNewTeamViewController.m in Sources */,
+				F0CFA4A81B35D27A00692362 /* CTCategory.m in Sources */,
+				F0CFA4A21B35C88300692362 /* CTOrder.m in Sources */,
 				F0CFA4981B359C9500692362 /* CTTeam.m in Sources */,
 				F0CFA4811B35813F00692362 /* CTHTTPSessionManager.m in Sources */,
 				F011982F1B355EB100E6AC66 /* ViewController.m in Sources */,
+				F0CFA4AE1B35EA4600692362 /* CTRestaurant.m in Sources */,
 				7978D2AF1B359360005AA5B5 /* CTTeamTableViewCell.m in Sources */,
 				F0CFA4991B359C9500692362 /* CTUser.m in Sources */,
 				F0CFA4841B35817700692362 /* CTSettingsManager.m in Sources */,
+				F0CFA4AB1B35E1D800692362 /* CTUserOrder.m in Sources */,
 				F0CFA4871B3581D300692362 /* CTDataManager.m in Sources */,
 				F01198261B355EB100E6AC66 /* main.m in Sources */,
 			);

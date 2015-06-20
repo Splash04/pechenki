@@ -31,4 +31,16 @@
     return self;
 }
 
+- (NSMutableDictionary *)attributs {
+    NSMutableDictionary *dictionary = [NSMutableDictionary new];
+    
+    [dictionary safeSetValue:self.name forKey:kName];
+    [dictionary safeSetValue:self.email forKey:kEmail];
+    [dictionary safeSetValue:self.phoneNumber forKey:kPhoneNumber];
+    [dictionary safeSetValue:self.imagePath forKey:kImagePath];
+    [dictionary safeSetValue:self.identifier forKey:kUserId];
+    
+    return dictionary;
+}
+
 @end

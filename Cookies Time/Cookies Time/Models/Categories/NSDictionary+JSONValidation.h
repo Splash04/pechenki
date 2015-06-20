@@ -12,6 +12,7 @@
 
 - (NSString *)stringForKey:(id)aKey ifNull:(NSString *)aValue;
 - (NSInteger)integerForKey:(id)aKey ifNull:(NSInteger)aValue;
+- (double)doubleForKey:(id)aKey ifNull:(double)aValue;
 - (id)objectForKey:(id)aKey ifNull:(id)aObject;
 
 - (void)safeSetValue:(id)value forKey:(NSString *)key;

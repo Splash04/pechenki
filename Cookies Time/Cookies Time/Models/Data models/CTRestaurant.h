@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CTProduct.h"
 
 @interface CTRestaurant : NSObject
+
+@property (nonatomic, strong) NSString *restaurantId;
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *phoneNumber;
+@property (nonatomic, strong) NSString *restaurantAddress;
+@property (nonatomic, strong) NSString *email;
+@property (nonatomic, strong) NSMutableArray *products;
+
+- (NSMutableDictionary *)attributs;
+- (instancetype)initWithAttributes:(NSDictionary *)attributes;
 
 @end

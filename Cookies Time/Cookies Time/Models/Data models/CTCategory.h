@@ -10,4 +10,10 @@
 
 @interface CTCategory : NSObject
 
+@property (nonatomic, strong) NSString *identifier;
+@property (nonatomic, strong) NSString *name;
+
+- (instancetype)initWithAttributes:(NSDictionary *)attributes;
+- (NSMutableDictionary *)attributs;
+
 @end
