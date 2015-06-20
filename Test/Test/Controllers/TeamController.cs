@@ -14,9 +14,11 @@ namespace Test.Controllers
     {
         public BaseResult Get()
         {
-            List<Team> result = new List<Team>();
+            List<Team> result;
             using (var db = new CookieContext())
             {
+                /*db.Teams.Add(new Team {Name = "Name 1"});
+                db.SaveChanges();*/
                 result = db.Teams.ToList();
             }
             return new TeamResult
@@ -29,7 +31,7 @@ namespace Test.Controllers
 
         public BaseResult Get(int teamId)
         {
-            List<Team> result = new List<Team>();
+            var result = new List<Team>();
             using (var db = new CookieContext())
             {
                 var team = db.Teams.FirstOrDefault(x => x.TeamId == teamId);
