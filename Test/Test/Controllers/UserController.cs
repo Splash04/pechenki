@@ -4,7 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
+using Test.DataAccess;
 using Test.DataAccess.Entities;
+using Test.Models;
 using Test.Results;
 
 namespace Test.Controllers
@@ -37,6 +39,35 @@ namespace Test.Controllers
                     }
                 }
             };
+        }
+
+
+        public BaseResult Join(JoinModel model)
+        {
+            try
+            {
+                using (var db = new CookieContext())
+                {
+                    db.UserTeams.Add(new UserTeam
+                    {
+                        UserId = model.UserId,
+                        TeamId = model.TeamId
+                    });
+                    db.SaveChanges();
+                }
+                return new BaseResult
+                {
+                    ErrorCode = 0
+                };
+            }
+            catch (Exception)
+            {
+                return new ErrorResult
+                {
+                    ErrorCode = 2,
+                    ErrorMessage = "Упс! Что-то пошло не так с нашей базой данных."
+                };
+            }
         }
 
     }
