@@ -10,6 +10,7 @@
 #import "CTTwitterTableViewCell.h"
 #import "CTPeopleListViewController.h"
 #import "CTPaymentInfoTableViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface CTTeamDetailsViewController ()
 
@@ -21,6 +22,9 @@
 @property (strong, nonatomic) IBOutlet UIImageView *btnHistoryPayment;
 @property (strong, nonatomic) IBOutlet UIImageView *btnOrder;
 @property (strong, nonatomic) IBOutlet UIImageView *btnMessages;
+@property (weak, nonatomic) IBOutlet UIImageView *groupImageView;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
 @end
 
@@ -38,6 +42,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSURL *url = [NSURL URLWithString:self.team.imagePath];
+    [self.groupImageView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"groupIcon"]];
+    self.nameLabel.text = self.team.name;
+    self.descriptionLabel.text = self.team.info;
+    
     // Do any additional setup after loading the view.
     
     self.tableView.delegate = self;

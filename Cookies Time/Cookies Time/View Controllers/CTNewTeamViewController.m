@@ -20,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UITextView *desc;
 @property (strong, nonatomic) IBOutlet UIPickerView *restaurantPicker;
 @property (strong, nonatomic) IBOutlet UITextField *restaurant;
+@property (weak, nonatomic) IBOutlet UIImageView *groupImageView;
 
 @end
 
