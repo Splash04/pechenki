@@ -21,6 +21,7 @@
 @property (strong, nonatomic) IBOutlet UIPickerView *restaurantPicker;
 @property (strong, nonatomic) IBOutlet UITextField *restaurant;
 @property (weak, nonatomic) IBOutlet UIImageView *groupImageView;
+@property (nonatomic, strong) CTTeam *team;
 
 @end
 
@@ -38,6 +39,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self showProgress];
+    self.team = [CTTeam new];
     // Do any additional setup after loading the view.
     self.restaurants = [[NSMutableArray alloc] initWithObjects:RESTAURANT_LIDO, nil];
     
@@ -45,6 +48,12 @@
     self.desc.layer.masksToBounds = NO;
     self.desc.layer.borderWidth = .5f;
     self.desc.layer.borderColor = [UIColor lightGrayColor].CGColor;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self hideProgress];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -122,7 +131,21 @@
 }
 
 - (IBAction)saveTap:(id)sender {
-#warning save team
+    self.team.name = self.name.text;
+    self.team.info = self.desc.text;
+    self.team.tag = self.hashtag.text;
+    
+    [CTDataManager createTeam:self.team withResultBlock:^(NSError *error) {
+        if(error != nil){
+            [self showAlert:@"Команда создана"];
+        } else {
+            NSLog(@"Create team error: %@", error);
+            if(error.code != 0) {
+                [self showAlert:@"Ошибка создания"];
+            }
+        }
+        [self.navigationController popViewControllerAnimated:YES];
+    } ];
 }
 
 @end

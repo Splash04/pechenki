@@ -100,7 +100,7 @@
 
 + (NSURLSessionDataTask *)createTeam:(CTTeam *)team withResultBlock:(void (^)(NSError *error))block {
     
-    return [[CTHTTPSessionManager sharedInstance] POST:kApiCreateTeam parameters:[team attributs] success:^(NSURLSessionDataTask * __unused task, id JSON) {
+    return [[CTHTTPSessionManager sharedInstance] POST:@"team/create" parameters:[team attributs] success:^(NSURLSessionDataTask * __unused task, id JSON) {
         NSLog(@"teams: %@", JSON);
         
         NSInteger errorCode = [JSON integerForKey:kErrorCode ifNull:-1];

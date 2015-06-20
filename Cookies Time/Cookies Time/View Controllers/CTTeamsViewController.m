@@ -39,6 +39,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
     [self showProgress];
     NSURLSessionTask *task = [CTDataManager getAllTeamsWithResultBlock:^(NSArray *teams, NSError *error) {
         [self hideProgress];
@@ -49,13 +58,10 @@
         else {
             NSLog(@"Error: %@", error);
         }
-
+        
     }];
     
     [UIAlertView showAlertViewForTaskWithErrorOnCompletion:task delegate:nil];
-    
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
 }
 
 - (void)didReceiveMemoryWarning {
