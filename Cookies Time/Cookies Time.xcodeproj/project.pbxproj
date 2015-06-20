@@ -11,6 +11,8 @@
 		792C31431B35A0E000148EB2 /* CTNewTeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C31421B35A0E000148EB2 /* CTNewTeamViewController.m */; };
 		792C31461B35CFEF00148EB2 /* CTTeamDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C31451B35CFEF00148EB2 /* CTTeamDetailsViewController.m */; };
 		792C314A1B35F4CC00148EB2 /* CTTwitterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C31491B35F4CC00148EB2 /* CTTwitterTableViewCell.m */; };
+		792C314D1B360B7500148EB2 /* CTPeopleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C314C1B360B7500148EB2 /* CTPeopleListViewController.m */; };
+		792C31511B361EDC00148EB2 /* CTPeopleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C31501B361EDC00148EB2 /* CTPeopleTableViewCell.m */; };
 		7978D2A41B358B07005AA5B5 /* CTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978D2A31B358B07005AA5B5 /* CTLoginViewController.m */; };
 		7978D2A71B3590CA005AA5B5 /* CTTeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978D2A61B3590CA005AA5B5 /* CTTeamsViewController.m */; };
 		7978D2AF1B359360005AA5B5 /* CTTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978D2AE1B359360005AA5B5 /* CTTeamTableViewCell.m */; };
@@ -44,6 +46,10 @@
 		792C31451B35CFEF00148EB2 /* CTTeamDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTTeamDetailsViewController.m; path = "Cookies Time/View Controllers/CTTeamDetailsViewController.m"; sourceTree = SOURCE_ROOT; };
 		792C31481B35F4CC00148EB2 /* CTTwitterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTTwitterTableViewCell.h; path = Twitter/CTTwitterTableViewCell.h; sourceTree = "<group>"; };
 		792C31491B35F4CC00148EB2 /* CTTwitterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTTwitterTableViewCell.m; path = Twitter/CTTwitterTableViewCell.m; sourceTree = "<group>"; };
+		792C314B1B360B7500148EB2 /* CTPeopleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTPeopleListViewController.h; path = "Cookies Time/View Controllers/CTPeopleListViewController.h"; sourceTree = SOURCE_ROOT; };
+		792C314C1B360B7500148EB2 /* CTPeopleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTPeopleListViewController.m; path = "Cookies Time/View Controllers/CTPeopleListViewController.m"; sourceTree = SOURCE_ROOT; };
+		792C314F1B361EDC00148EB2 /* CTPeopleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTPeopleTableViewCell.h; path = People/CTPeopleTableViewCell.h; sourceTree = "<group>"; };
+		792C31501B361EDC00148EB2 /* CTPeopleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTPeopleTableViewCell.m; path = People/CTPeopleTableViewCell.m; sourceTree = "<group>"; };
 		7978D2A21B358B07005AA5B5 /* CTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTLoginViewController.h; path = "Cookies Time/View Controllers/CTLoginViewController.h"; sourceTree = SOURCE_ROOT; };
 		7978D2A31B358B07005AA5B5 /* CTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTLoginViewController.m; path = "Cookies Time/View Controllers/CTLoginViewController.m"; sourceTree = SOURCE_ROOT; };
 		7978D2A51B3590CA005AA5B5 /* CTTeamsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTTeamsViewController.h; path = "Cookies Time/View Controllers/CTTeamsViewController.h"; sourceTree = SOURCE_ROOT; };
@@ -112,6 +118,15 @@
 				792C31491B35F4CC00148EB2 /* CTTwitterTableViewCell.m */,
 			);
 			name = Twitter;
+			sourceTree = "<group>";
+		};
+		792C314E1B361EB100148EB2 /* People */ = {
+			isa = PBXGroup;
+			children = (
+				792C314F1B361EDC00148EB2 /* CTPeopleTableViewCell.h */,
+				792C31501B361EDC00148EB2 /* CTPeopleTableViewCell.m */,
+			);
+			name = People;
 			sourceTree = "<group>";
 		};
 		7978D2A91B359242005AA5B5 /* Team */ = {
@@ -262,6 +277,8 @@
 		F0CFA4741B3580A300692362 /* People list */ = {
 			isa = PBXGroup;
 			children = (
+				792C314B1B360B7500148EB2 /* CTPeopleListViewController.h */,
+				792C314C1B360B7500148EB2 /* CTPeopleListViewController.m */,
 			);
 			path = "People list";
 			sourceTree = "<group>";
@@ -342,6 +359,7 @@
 		F0CFA47B1B3580A300692362 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				792C314E1B361EB100148EB2 /* People */,
 				792C31471B35F47400148EB2 /* Twitter */,
 				7978D2A91B359242005AA5B5 /* Team */,
 			);
@@ -484,6 +502,8 @@
 				F0CFA4841B35817700692362 /* CTSettingsManager.m in Sources */,
 				F0CFA4AB1B35E1D800692362 /* CTUserOrder.m in Sources */,
 				F0CFA4871B3581D300692362 /* CTDataManager.m in Sources */,
+				792C314D1B360B7500148EB2 /* CTPeopleListViewController.m in Sources */,
+				792C31511B361EDC00148EB2 /* CTPeopleTableViewCell.m in Sources */,
 				F01198261B355EB100E6AC66 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

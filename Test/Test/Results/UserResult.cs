@@ -8,6 +8,7 @@ namespace Test.Results
 {
     public class UserResult : BaseResult
     {
+        public User User { get; set; } 
         public List<User> Users { get; set; } 
     }
 }

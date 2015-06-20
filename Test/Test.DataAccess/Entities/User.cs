@@ -14,5 +14,6 @@ namespace Test.DataAccess.Entities
         public string Phone { get; set; }
         public string Email { get; set; }
         public string ImageUrl { get; set; }
+        public string UserName { get; set; }
     }
 }

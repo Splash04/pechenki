@@ -4,21 +4,56 @@ using System.Linq;
 using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
+using Test.DataAccess;
 using Test.DataAccess.Entities;
+using Test.Models;
 using Test.Results;
+using Test.SmgConnect;
 
 namespace Test.Controllers
 {
     public class LoginController : ApiController
     {
-        public BaseResult Get()
+        public BaseResult Post(LoginModel loginModel)
         {
-            return new ErrorResult
+            SmgService smgService = new SmgService();
+            string sessionId = smgService.Authenticate(loginModel.UserName, loginModel.Password);
+
+            if (sessionId != "0")
             {
-                ErrorCode = 0,
-                DataType = "error",
-                ErrorMessage = "Invalid username of password"
-            };
+                User user = null;
+                using (var db = new CookieContext())
+                {
+                    user = db.Users.FirstOrDefault(x => x.UserName == loginModel.UserName);
+                }
+
+                if (user == null)
+                {
+                    return new ErrorResult
+                    {
+                        ErrorCode = 2,
+                        DataType = "error",
+                        ErrorMessage = "Sorry, but you are not in our DB yet :("
+                    };
+                }
+
+
+                return new UserResult
+                {
+                    ErrorCode = 0,
+                    DataType = "user",
+                    User = user
+                };
+            }
+            else
+            {
+                return new ErrorResult
+                {
+                    ErrorCode = 1,
+                    DataType = "error",
+                    ErrorMessage = "Invalid username of password"
+                };
+            }
         }
     }
 }
