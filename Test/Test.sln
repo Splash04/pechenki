@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.DataAccess", "Test.DataAccess\Test.DataAccess.csproj", "{55151345-48DF-4AEE-A3BF-6B92E72700BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.SmgConnect", "Test.SmgConnect\Test.SmgConnect.csproj", "{285EFBE8-008A-4CBF-BFAB-911D5773161C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{55151345-48DF-4AEE-A3BF-6B92E72700BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55151345-48DF-4AEE-A3BF-6B92E72700BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55151345-48DF-4AEE-A3BF-6B92E72700BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{285EFBE8-008A-4CBF-BFAB-911D5773161C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{285EFBE8-008A-4CBF-BFAB-911D5773161C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{285EFBE8-008A-4CBF-BFAB-911D5773161C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{285EFBE8-008A-4CBF-BFAB-911D5773161C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
