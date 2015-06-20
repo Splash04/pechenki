@@ -10,14 +10,17 @@
 
 @implementation CTDataManager
 
-+ (instancetype)sharedInstance
-{
++ (instancetype)sharedInstance {
     static id sharedInstance = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [self new];
     });
     return sharedInstance;
+}
+
++ (void)loginWithUser:(NSString *)user password:(NSString *)password withResultBlock:(void (^)(NSArray *posts, NSError *error))block{
+    
 }
 
 @end

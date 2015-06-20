@@ -7,8 +7,9 @@
 //
 
 #import "CTHTTPSessionManager.h"
+#import "CTServerConstants.h"
 
-static NSString * const CTServerAPIBaseURLString = @"http://10.55.1.27:9999/api";
+static NSString * const CTServerAPIBaseURLString = kServerAddress;
 
 @implementation CTHTTPSessionManager
 

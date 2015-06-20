@@ -19,6 +19,9 @@
 		F0CFA4811B35813F00692362 /* CTHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4801B35813F00692362 /* CTHTTPSessionManager.m */; };
 		F0CFA4841B35817700692362 /* CTSettingsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4831B35817700692362 /* CTSettingsManager.m */; };
 		F0CFA4871B3581D300692362 /* CTDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4861B3581D300692362 /* CTDataManager.m */; };
+		F0CFA48A1B358F3300692362 /* CTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4891B358F3300692362 /* CTUser.m */; };
+		F0CFA4901B35935600692362 /* NSDictionary+JSONValidation.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA48F1B35935600692362 /* NSDictionary+JSONValidation.m */; };
+		F0CFA4931B35954B00692362 /* CTTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4921B35954B00692362 /* CTTeam.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,14 @@
 		F0CFA4831B35817700692362 /* CTSettingsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSettingsManager.m; sourceTree = "<group>"; };
 		F0CFA4851B3581D300692362 /* CTDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTDataManager.h; sourceTree = "<group>"; };
 		F0CFA4861B3581D300692362 /* CTDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTDataManager.m; sourceTree = "<group>"; };
+		F0CFA4881B358F3300692362 /* CTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTUser.h; sourceTree = "<group>"; };
+		F0CFA4891B358F3300692362 /* CTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTUser.m; sourceTree = "<group>"; };
+		F0CFA48B1B35910600692362 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		F0CFA48C1B35914600692362 /* CTServerConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTServerConstants.h; sourceTree = "<group>"; };
+		F0CFA48E1B35935600692362 /* NSDictionary+JSONValidation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+JSONValidation.h"; sourceTree = "<group>"; };
+		F0CFA48F1B35935600692362 /* NSDictionary+JSONValidation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+JSONValidation.m"; sourceTree = "<group>"; };
+		F0CFA4911B35954B00692362 /* CTTeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTeam.h; sourceTree = "<group>"; };
+		F0CFA4921B35954B00692362 /* CTTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTTeam.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +128,7 @@
 			children = (
 				F01198241B355EB100E6AC66 /* Info.plist */,
 				F01198251B355EB100E6AC66 /* main.m */,
+				F0CFA48B1B35910600692362 /* Constants.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -213,6 +225,7 @@
 		F0CFA4771B3580A300692362 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F0CFA48D1B35932100692362 /* Categories */,
 				F0CFA4781B3580A300692362 /* Data models */,
 				F0CFA4791B3580A300692362 /* Database */,
 				F0CFA47A1B3580A300692362 /* Managers */,
@@ -223,6 +236,10 @@
 		F0CFA4781B3580A300692362 /* Data models */ = {
 			isa = PBXGroup;
 			children = (
+				F0CFA4881B358F3300692362 /* CTUser.h */,
+				F0CFA4891B358F3300692362 /* CTUser.m */,
+				F0CFA4911B35954B00692362 /* CTTeam.h */,
+				F0CFA4921B35954B00692362 /* CTTeam.m */,
 			);
 			path = "Data models";
 			sourceTree = "<group>";
@@ -237,6 +254,7 @@
 		F0CFA47A1B3580A300692362 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				F0CFA48C1B35914600692362 /* CTServerConstants.h */,
 				F0CFA47F1B35813F00692362 /* CTHTTPSessionManager.h */,
 				F0CFA4801B35813F00692362 /* CTHTTPSessionManager.m */,
 				F0CFA4821B35817700692362 /* CTSettingsManager.h */,
@@ -252,6 +270,15 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F0CFA48D1B35932100692362 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				F0CFA48E1B35935600692362 /* NSDictionary+JSONValidation.h */,
+				F0CFA48F1B35935600692362 /* NSDictionary+JSONValidation.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -364,8 +391,11 @@
 				F01198291B355EB100E6AC66 /* AppDelegate.m in Sources */,
 				F0CFA4811B35813F00692362 /* CTHTTPSessionManager.m in Sources */,
 				F011982F1B355EB100E6AC66 /* ViewController.m in Sources */,
+				F0CFA4901B35935600692362 /* NSDictionary+JSONValidation.m in Sources */,
 				F0CFA4841B35817700692362 /* CTSettingsManager.m in Sources */,
 				F0CFA4871B3581D300692362 /* CTDataManager.m in Sources */,
+				F0CFA4931B35954B00692362 /* CTTeam.m in Sources */,
+				F0CFA48A1B358F3300692362 /* CTUser.m in Sources */,
 				F01198261B355EB100E6AC66 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
