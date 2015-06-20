@@ -14,6 +14,7 @@
 #import "UIAlertView+AFNetworking.h"
 #import "CTNewTeamViewController.h"
 #import "CTTeamDetailsViewController.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface CTTeamsViewController ()
 
@@ -77,10 +78,11 @@
     if (cell == nil) {
         cell = [[CTTeamTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CTTeamTableViewCell.cellIdentifier];
     }
-    
-    cell.name.text = ((CTTeam *)self.dataArray[indexPath.row]).name;
-    cell.info.text = ((CTTeam *)self.dataArray[indexPath.row]).info;
-    //cell.photo.image = ;
+    CTTeam *team = ((CTTeam *)self.dataArray[indexPath.row]);
+    cell.name.text = team.name;
+    cell.info.text = team.info;
+    NSURL *url = [NSURL URLWithString:team.imagePath];
+    [cell.photo setImageWithURL:url placeholderImage:[UIImage imageNamed:@"groupIcon"]];
     
     return cell;
 }
