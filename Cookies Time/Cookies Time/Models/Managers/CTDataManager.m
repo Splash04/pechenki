@@ -83,7 +83,7 @@
             if(block) {
                 NSArray *dataArray = [JSON objectForKey:dataType ifNull:nil];
                 NSMutableArray *teamsArray = [NSMutableArray arrayWithCapacity:[dataArray count]];
-                for (NSDictionary *attributes in teamsArray) {
+                for (NSDictionary *attributes in dataArray) {
                     CTTeam *team = [[CTTeam alloc] initWithAttributes:attributes];
                     [teamsArray addObject:team];
                 }
