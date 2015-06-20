@@ -50,6 +50,7 @@ namespace Test.Controllers
 
         public BaseResult GetUserTeams(int userId)
         {
+            
             return new TeamResult
             {
                 ErrorCode = 0,

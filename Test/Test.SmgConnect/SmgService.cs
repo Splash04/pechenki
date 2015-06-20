@@ -66,7 +66,7 @@ namespace Test.SmgConnect
                 {
                     for (int i = 0; i < responce.Profiles.Count; i++)
                     {
-                        if (responce.Profiles[i].DeptId == 10)
+                        if (responce.Profiles[i].ProfileId == 643)
                         {
                             SmgEmployeeDetails details = GetEmployeeDetails(sessionId, responce.Profiles[i].ProfileId);
                             if (details != null)
