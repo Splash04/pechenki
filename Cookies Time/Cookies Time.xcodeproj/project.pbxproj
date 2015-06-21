@@ -15,6 +15,9 @@
 		792C31511B361EDC00148EB2 /* CTPeopleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C31501B361EDC00148EB2 /* CTPeopleTableViewCell.m */; };
 		792C31541B3622AB00148EB2 /* CTPaymentInfoTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C31531B3622AB00148EB2 /* CTPaymentInfoTableViewController.m */; };
 		792C31581B36237900148EB2 /* CTPaymentInfoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C31571B36237900148EB2 /* CTPaymentInfoTableViewCell.m */; };
+		792C315C1B3648B700148EB2 /* CTCategorieTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C315B1B3648B700148EB2 /* CTCategorieTableViewCell.m */; };
+		792C315F1B364D4600148EB2 /* CTProductsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C315E1B364D4600148EB2 /* CTProductsTableViewController.m */; };
+		792C31621B364DE900148EB2 /* CTProductTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 792C31611B364DE900148EB2 /* CTProductTableViewCell.m */; };
 		7978D2A41B358B07005AA5B5 /* CTLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978D2A31B358B07005AA5B5 /* CTLoginViewController.m */; };
 		7978D2A71B3590CA005AA5B5 /* CTTeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978D2A61B3590CA005AA5B5 /* CTTeamsViewController.m */; };
 		7978D2AF1B359360005AA5B5 /* CTTeamTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978D2AE1B359360005AA5B5 /* CTTeamTableViewCell.m */; };
@@ -58,6 +61,12 @@
 		792C31531B3622AB00148EB2 /* CTPaymentInfoTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTPaymentInfoTableViewController.m; path = "Cookies Time/View Controllers/CTPaymentInfoTableViewController.m"; sourceTree = SOURCE_ROOT; };
 		792C31561B36237900148EB2 /* CTPaymentInfoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTPaymentInfoTableViewCell.h; path = PaymentInfo/CTPaymentInfoTableViewCell.h; sourceTree = "<group>"; };
 		792C31571B36237900148EB2 /* CTPaymentInfoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTPaymentInfoTableViewCell.m; path = PaymentInfo/CTPaymentInfoTableViewCell.m; sourceTree = "<group>"; };
+		792C315A1B3648B700148EB2 /* CTCategorieTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTCategorieTableViewCell.h; path = Categorie/CTCategorieTableViewCell.h; sourceTree = "<group>"; };
+		792C315B1B3648B700148EB2 /* CTCategorieTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTCategorieTableViewCell.m; path = Categorie/CTCategorieTableViewCell.m; sourceTree = "<group>"; };
+		792C315D1B364D4600148EB2 /* CTProductsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTProductsTableViewController.h; sourceTree = "<group>"; };
+		792C315E1B364D4600148EB2 /* CTProductsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTProductsTableViewController.m; sourceTree = "<group>"; };
+		792C31601B364DE900148EB2 /* CTProductTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTProductTableViewCell.h; path = Product/CTProductTableViewCell.h; sourceTree = "<group>"; };
+		792C31611B364DE900148EB2 /* CTProductTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTProductTableViewCell.m; path = Product/CTProductTableViewCell.m; sourceTree = "<group>"; };
 		7978D2A21B358B07005AA5B5 /* CTLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTLoginViewController.h; path = "Cookies Time/View Controllers/CTLoginViewController.h"; sourceTree = SOURCE_ROOT; };
 		7978D2A31B358B07005AA5B5 /* CTLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CTLoginViewController.m; path = "Cookies Time/View Controllers/CTLoginViewController.m"; sourceTree = SOURCE_ROOT; };
 		7978D2A51B3590CA005AA5B5 /* CTTeamsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CTTeamsViewController.h; path = "Cookies Time/View Controllers/CTTeamsViewController.h"; sourceTree = SOURCE_ROOT; };
@@ -148,6 +157,15 @@
 				792C31571B36237900148EB2 /* CTPaymentInfoTableViewCell.m */,
 			);
 			name = PaymentInfo;
+			sourceTree = "<group>";
+		};
+		792C31591B36488C00148EB2 /* Categorie */ = {
+			isa = PBXGroup;
+			children = (
+				792C315A1B3648B700148EB2 /* CTCategorieTableViewCell.h */,
+				792C315B1B3648B700148EB2 /* CTCategorieTableViewCell.m */,
+			);
+			name = Categorie;
 			sourceTree = "<group>";
 		};
 		7978D2A91B359242005AA5B5 /* Team */ = {
@@ -281,6 +299,8 @@
 			children = (
 				F0CFA4B51B363B2200692362 /* CTCategoriesViewController.h */,
 				F0CFA4B61B363B2200692362 /* CTCategoriesViewController.m */,
+				792C315D1B364D4600148EB2 /* CTProductsTableViewController.h */,
+				792C315E1B364D4600148EB2 /* CTProductsTableViewController.m */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -386,10 +406,13 @@
 		F0CFA47B1B3580A300692362 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				792C31591B36488C00148EB2 /* Categorie */,
 				792C31551B36234E00148EB2 /* PaymentInfo */,
 				792C314E1B361EB100148EB2 /* People */,
 				792C31471B35F47400148EB2 /* Twitter */,
 				7978D2A91B359242005AA5B5 /* Team */,
+				792C31601B364DE900148EB2 /* CTProductTableViewCell.h */,
+				792C31611B364DE900148EB2 /* CTProductTableViewCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -522,11 +545,13 @@
 				F0CFA4B11B36136B00692362 /* CTSession.m in Sources */,
 				F0CFA4A21B35C88300692362 /* CTOrder.m in Sources */,
 				F0CFA4981B359C9500692362 /* CTTeam.m in Sources */,
+				792C31621B364DE900148EB2 /* CTProductTableViewCell.m in Sources */,
 				F0CFA4811B35813F00692362 /* CTHTTPSessionManager.m in Sources */,
 				792C314A1B35F4CC00148EB2 /* CTTwitterTableViewCell.m in Sources */,
 				F011982F1B355EB100E6AC66 /* ViewController.m in Sources */,
 				F0CFA4AE1B35EA4600692362 /* CTRestaurant.m in Sources */,
 				7978D2AF1B359360005AA5B5 /* CTTeamTableViewCell.m in Sources */,
+				792C315F1B364D4600148EB2 /* CTProductsTableViewController.m in Sources */,
 				792C31461B35CFEF00148EB2 /* CTTeamDetailsViewController.m in Sources */,
 				F0CFA4991B359C9500692362 /* CTUser.m in Sources */,
 				F0CFA4841B35817700692362 /* CTSettingsManager.m in Sources */,
@@ -536,6 +561,7 @@
 				792C31511B361EDC00148EB2 /* CTPeopleTableViewCell.m in Sources */,
 				F0CFA4B71B363B2200692362 /* CTCategoriesViewController.m in Sources */,
 				F01198261B355EB100E6AC66 /* main.m in Sources */,
+				792C315C1B3648B700148EB2 /* CTCategorieTableViewCell.m in Sources */,
 				F0CFA4B41B36354A00692362 /* CTBaseTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

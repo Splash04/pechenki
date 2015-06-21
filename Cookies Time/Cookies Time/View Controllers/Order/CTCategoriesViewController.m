@@ -7,9 +7,11 @@
 //
 
 #import "CTCategoriesViewController.h"
-#import "CTTwitterTableViewCell.h"
+#import "CTCategorieTableViewCell.h"
 
 @interface CTCategoriesViewController ()
+
+@property (strong, nonatomic) NSMutableArray *dataArray;
 
 @end
 
@@ -61,16 +63,19 @@
 }
 */
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.dataArray count];
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    CTTwitterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CTTwitterTableViewCell.cellIdentifier forIndexPath:indexPath];
+    CTCategorieTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CTCategorieTableViewCell.cellIdentifier forIndexPath:indexPath];
     if (cell == nil) {
-        cell = [[CTTwitterTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CTTwitterTableViewCell.cellIdentifier];
+        cell = [[CTCategorieTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CTCategorieTableViewCell.cellIdentifier];
     }
     
-#warning !!!!
     CTCategory *category = (CTCategory *)self.dataArray[indexPath.row];
-    cell.twitterText.text =  category.name;//((CTTeam *)self.dataArray[indexPath.row]).name;
+    cell.categorie.text =  category.name;//((CTTeam *)self.dataArray[indexPath.row]).name;
     //cell.twitterImage.text = ((CTTeam *)self.dataArray[indexPath.row]).info;
     
     return cell;
