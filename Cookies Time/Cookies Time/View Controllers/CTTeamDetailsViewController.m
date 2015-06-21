@@ -158,8 +158,13 @@
 
 }
 - (IBAction)joinToTeamTap:(id)sender {
-#warning join to team
-
+    [CTDataManager joinTeam:self.team forUser:[CTSession sharedInstance].user withResultBlock:^(NSError *error) {
+        if(error != nil) {
+            NSLog(@"join team error: %@", error);
+        } else {
+            [self showAlert:@"Вы успешно добавлены в команду"];
+        }
+    }];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {

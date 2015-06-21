@@ -123,11 +123,11 @@
 }
 
 + (NSURLSessionDataTask *)joinTeam:(CTTeam *)team forUser:(CTUser *)user withResultBlock:(void (^)(NSError *error))block {
-    NSDictionary *parameters = @{@"userId" : @"1",
-                                 @"teamId" : @"1"};
+    NSDictionary *parameters = @{@"userId" : team.identifier,
+                                 @"teamId" : user.identifier};
     //http://10.55.1.27:8888/api/team/join?userId=1&teamId=2
     NSLog(@"Join team dictionary: %@", parameters);
-    return [[CTHTTPSessionManager sharedInstance] GET:[NSString stringWithFormat:@"team/join?userId=%@&teamId=%@", @"1", @"1"] parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
+    return [[CTHTTPSessionManager sharedInstance] GET:@"team/join" parameters:parameters success:^(NSURLSessionDataTask * __unused task, id JSON) {
         NSLog(@"teams: %@", JSON);
         
         NSInteger errorCode = [JSON integerForKey:kErrorCode ifNull:-1];

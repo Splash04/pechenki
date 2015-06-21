@@ -39,6 +39,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.groupImageView.image = [UIImage imageNamed:@"groupIcon"];
+    
     [self showProgress];
     self.team = [CTTeam new];
     // Do any additional setup after loading the view.
