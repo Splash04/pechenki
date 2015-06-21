@@ -173,7 +173,8 @@
 }
 
 + (NSURLSessionDataTask *)getProductCategoryForRestaurant:(CTRestaurant *)restaurant withResultBlock:(void (^)(NSArray *categories, NSError *error))block {
-    return [[CTHTTPSessionManager sharedInstance] GET:[NSString stringWithFormat:@"%@?%@=%@", kGetCategories, kRestaurantId, restaurant.restaurantId] parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
+    //http://10.55.1.27:8888/api/category/GetByRestaurant?restaurantId=1
+    return [[CTHTTPSessionManager sharedInstance] GET:[NSString stringWithFormat:@"category/GetByRestaurant?restaurantId=%@", restaurant.restaurantId] parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
         NSLog(@"ProductCategoryForRestaurant success: %@", JSON);
         
         NSInteger errorCode = [JSON integerForKey:kErrorCode ifNull:-1];

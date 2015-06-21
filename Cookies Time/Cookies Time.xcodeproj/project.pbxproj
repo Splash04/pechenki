@@ -39,6 +39,7 @@
 		F0CFA4AE1B35EA4600692362 /* CTRestaurant.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4AD1B35EA4600692362 /* CTRestaurant.m */; };
 		F0CFA4B11B36136B00692362 /* CTSession.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4B01B36136B00692362 /* CTSession.m */; };
 		F0CFA4B41B36354A00692362 /* CTBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4B31B36354A00692362 /* CTBaseTableViewController.m */; };
+		F0CFA4B71B363B2200692362 /* CTCategoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F0CFA4B61B363B2200692362 /* CTCategoriesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +107,8 @@
 		F0CFA4B01B36136B00692362 /* CTSession.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTSession.m; sourceTree = "<group>"; };
 		F0CFA4B21B36354A00692362 /* CTBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBaseTableViewController.h; sourceTree = "<group>"; };
 		F0CFA4B31B36354A00692362 /* CTBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBaseTableViewController.m; sourceTree = "<group>"; };
+		F0CFA4B51B363B2200692362 /* CTCategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCategoriesViewController.h; sourceTree = "<group>"; };
+		F0CFA4B61B363B2200692362 /* CTCategoriesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTCategoriesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +279,8 @@
 		F0CFA4711B3580A300692362 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				F0CFA4B51B363B2200692362 /* CTCategoriesViewController.h */,
+				F0CFA4B61B363B2200692362 /* CTCategoriesViewController.m */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -529,6 +534,7 @@
 				F0CFA4871B3581D300692362 /* CTDataManager.m in Sources */,
 				792C314D1B360B7500148EB2 /* CTPeopleListViewController.m in Sources */,
 				792C31511B361EDC00148EB2 /* CTPeopleTableViewCell.m in Sources */,
+				F0CFA4B71B363B2200692362 /* CTCategoriesViewController.m in Sources */,
 				F01198261B355EB100E6AC66 /* main.m in Sources */,
 				F0CFA4B41B36354A00692362 /* CTBaseTableViewController.m in Sources */,
 			);

@@ -11,11 +11,10 @@
 #import "CTPeopleListViewController.h"
 #import "CTPaymentInfoTableViewController.h"
 #import "UIImageView+AFNetworking.h"
+#import "CTCategoriesViewController.h"
 
 @interface CTTeamDetailsViewController ()
 
-@property (strong, nonatomic) NSMutableArray *dataArray;
-@property (strong, nonatomic) IBOutlet UITableView *tableView;
 @property (strong, nonatomic) IBOutlet UIImageView *btnPeople;
 @property (strong, nonatomic) IBOutlet UIImageView *btnHistory;
 @property (strong, nonatomic) IBOutlet UIImageView *btnPayment;
@@ -128,7 +127,7 @@
 }
 
 - (void)tapOrder:(id)sender {
-    NSLog(@"tapOrder");
+    [self performSegueWithIdentifier:@"CTCategoriesViewController" sender:self];
 }
 
 - (void)tapMessages:(id)sender {
@@ -141,9 +140,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning !!!!
-    return 10;
-    //return [self.dataArray count];
+    return [self.dataArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -170,7 +167,12 @@
         CTPeopleListViewController *peopleViewController = [segue destinationViewController];
         peopleViewController.team = self.team;
     }
-    
+    if ([[segue identifier] isEqualToString:[CTCategoriesViewController segueIdentifier]]) {
+        CTCategoriesViewController *peopleViewController = [segue destinationViewController];
+        peopleViewController.team = self.team;
+        peopleViewController.restaurant = [CTRestaurant new];
+        peopleViewController.restaurant.restaurantId = @"1";
+    }
 }
 
 @end

@@ -11,6 +11,8 @@
 
 @interface CTTeamDetailsViewController : CTBaseViewController <UITableViewDataSource, UITableViewDelegate>
 
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) NSMutableArray *dataArray;
 @property (strong, nonatomic) CTTeam *team;
 
 + (NSString *)segueIdentifier;
