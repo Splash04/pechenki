@@ -8,6 +8,7 @@
 
 #import "CTPeopleListViewController.h"
 #import "CTPeopleTableViewCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface CTPeopleListViewController ()
 
@@ -30,8 +31,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    
+    [self showProgress];
+    [CTDataManager getUsersForGroup:self.team withResultBlock:^(NSArray *users, NSError *error) {
+        [self hideProgress];
+        if(error != nil) {
+            NSLog(@"People error: %@", error);
+        } else {
+            self.dataArray = [users mutableCopy];
+            [self.tableView reloadData];
+        }
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -48,12 +57,13 @@
     if (cell == nil) {
         cell = [[CTPeopleTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CTPeopleTableViewCell.cellIdentifier];
     }
-    
+    CTUser *user = (CTUser *)self.dataArray[indexPath.row];
 #warning !!!!
-    cell.FIO.text = @"FIO";//((CTTeam *)self.dataArray[indexPath.row]).name;
-    cell.balance.text = @"Balance";
-    cell.photo = nil;
+    cell.FIO.text = user.name;// @"FIO";//((CTTeam *)self.dataArray[indexPath.row]).name;
+    cell.balance.text = @"35 000 б.р";
     
+    NSURL *url = [NSURL URLWithString:user.imagePath];
+    [cell.photo setImageWithURL:url placeholderImage:[UIImage imageNamed:@"userIcon"]];
     
     return cell;
 }

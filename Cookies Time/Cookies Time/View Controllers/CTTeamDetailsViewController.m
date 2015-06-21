@@ -165,4 +165,12 @@
 
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:[CTPeopleListViewController segueIdentifier]]) {
+        CTPeopleListViewController *peopleViewController = [segue destinationViewController];
+        peopleViewController.team = self.team;
+    }
+    
+}
+
 @end

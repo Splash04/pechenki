@@ -6,9 +6,11 @@
 //  Copyright (c) 2015 Splash. All rights reserved.
 //
 
-#import "CTBaseViewController.h"
+#import "CTBaseTableViewController.h"
 
-@interface CTPeopleListViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
+@interface CTPeopleListViewController : CTBaseTableViewController <UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) CTTeam *team;
 
 + (NSString *)segueIdentifier;
 

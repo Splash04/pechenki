@@ -238,6 +238,39 @@
     }];
 }
 
++ (NSURLSessionDataTask *)getUsersForGroup:(CTTeam *)team withResultBlock:(void (^)(NSArray *users, NSError *error))block {
+    return [[CTHTTPSessionManager sharedInstance] GET:[NSString stringWithFormat:@"user/GetUsersOfTeam?teamId=%@", team.identifier] parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
+        NSLog(@"ProductsForCategory success: %@", JSON);
+        
+        NSInteger errorCode = [JSON integerForKey:kErrorCode ifNull:-1];
+        NSString *dataType = [JSON stringForKey:kDataType ifNull:nil];
+        if([dataType length] == 0) {
+            errorCode = -2;
+        }
+        
+        if(errorCode != 0) {
+            NSError *error = [self errorWithCode:errorCode errorMessage:[JSON stringForKey:kErrorMessage ifNull:@"Data error"]];
+            if (block) {
+                block(nil, error);
+            }
+        } else {
+            if(block) {
+                NSArray *dataArray = [JSON objectForKey:dataType ifNull:nil];
+                NSMutableArray *usersArray = [NSMutableArray arrayWithCapacity:[dataArray count]];
+                for (NSDictionary *attributes in dataArray) {
+                    CTUser *user = [[CTUser alloc] initWithAttributes:attributes];
+                    [usersArray addObject:user];
+                }
+                block(usersArray, nil);
+            }
+        }
+    } failure:^(NSURLSessionDataTask *__unused task, NSError *error) {
+        if (block) {
+            block(nil, error);
+        }
+    }];
+}
+
 + (NSError *)errorWithCode:(NSInteger)errorCode errorMessage:(NSString *)errorMessage {
     NSArray *keys = [NSArray arrayWithObjects: NSLocalizedDescriptionKey, nil];
     NSArray *values = [NSArray arrayWithObjects:errorMessage, nil];

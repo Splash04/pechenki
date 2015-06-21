@@ -23,5 +23,6 @@
 + (NSURLSessionDataTask *)getProductCategoryForRestaurant:(CTRestaurant *)restaurant withResultBlock:(void (^)(NSArray *categories, NSError *error))block;
 + (NSURLSessionDataTask *)getProductsForCategory:(CTCategory *)category withResultBlock:(void (^)(NSArray *products, NSError *error))block;
 + (NSURLSessionDataTask *)joinTeam:(CTTeam *)team forUser:(CTUser *)user withResultBlock:(void (^)(NSError *error))block;
++ (NSURLSessionDataTask *)getUsersForGroup:(CTTeam *)team withResultBlock:(void (^)(NSArray *users, NSError *error))block;
 
 @end

@@ -18,7 +18,11 @@
         return nil;
     }
     if(attributes != nil) {
-        self.identifier = [attributes stringForKey:kTeamIdentifier ifNull:nil];
+        NSInteger teamId = [attributes integerForKey:kTeamIdentifier ifNull:0];
+        if(teamId != 0) {
+            self.identifier = [NSString stringWithFormat:@"%ld", (long)teamId];
+        }
+        //self.identifier = [attributes stringForKey:kTeamIdentifier ifNull:nil];
         self.name = [attributes stringForKey:kName ifNull:nil];
         self.imagePath = [attributes stringForKey:kImagePath ifNull:nil];
         self.tag = [attributes stringForKey:kTag ifNull:nil];
