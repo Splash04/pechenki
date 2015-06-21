@@ -19,7 +19,11 @@
         return nil;
     }
     if(attributes != nil) {
-        self.identifier = [attributes stringForKey:kTeamIdentifier ifNull:nil];
+        NSInteger userId = [attributes integerForKey:@"productId" ifNull:0];
+        if(userId != 0) {
+            self.identifier = [NSString stringWithFormat:@"%ld", (long)userId];
+        }
+        //self.identifier = [attributes stringForKey:kTeamIdentifier ifNull:nil];
         self.name = [attributes stringForKey:kName ifNull:nil];
         self.productWeight = [attributes stringForKey:kProductWeight ifNull:nil];
         self.imageUrl = [attributes stringForKey:kImagePath ifNull:nil];

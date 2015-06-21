@@ -20,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.login.text = @"igor.kharitoniuk";
+    self.password.text = @"1427booM02";
     // Do any additional setup after loading the view.
 }
 
@@ -32,7 +34,7 @@
 - (IBAction)loginTap:(id)sender {
     [self showProgress];
     
-    [CTDataManager loginWithUser:@"igor.kharitoniuk" password:@"1427booM02" withResultBlock:^(CTUser *user, NSError *error) {
+    [CTDataManager loginWithUser:self.login.text password:self.password.text withResultBlock:^(CTUser *user, NSError *error) {
         [self hideProgress];
         if(error != nil) {
             NSLog(@"Login error: %@", error);
