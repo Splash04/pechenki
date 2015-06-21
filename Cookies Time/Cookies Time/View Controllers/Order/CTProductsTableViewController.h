@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CTBaseTableViewController.h"
+#import "CTProductTableViewCell.h"
 
-@interface CTProductsTableViewController : UITableViewController
+@interface CTProductsTableViewController : CTBaseTableViewController
+@property (nonatomic, strong) CTCategory *category;
 
 + (NSString *)segueIdentifier;
 

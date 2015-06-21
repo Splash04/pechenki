@@ -18,7 +18,11 @@
         return nil;
     }
     if(attributes != nil) {
-        self.identifier = [attributes stringForKey:kCategoryId ifNull:nil];
+        NSInteger teamId = [attributes integerForKey:kCategoryId ifNull:0];
+        if(teamId != 0) {
+            self.identifier = [NSString stringWithFormat:@"%ld", (long)teamId];
+        }
+       // self.identifier = [attributes stringForKey:kCategoryId ifNull:nil];
         self.name = [attributes stringForKey:kName ifNull:nil];
     } else {
         NSLog(@"Category data is empty");

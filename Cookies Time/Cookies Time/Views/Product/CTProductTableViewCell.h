@@ -14,6 +14,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *name;
 @property (strong, nonatomic) IBOutlet UILabel *price;
 @property (strong, nonatomic) IBOutlet UILabel *weight;
+@property (weak, nonatomic) IBOutlet UIButton *checkboxButton;
 
 + (NSString *)cellIdentifier;
 

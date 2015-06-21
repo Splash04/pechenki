@@ -8,10 +8,16 @@
 
 #import <Foundation/Foundation.h>
 #import "CTUser.h"
+#import "CTUserOrder.h"
 
 @interface CTSession : NSObject
 
-@property (nonatomic, retain) CTUser *user;
+@property (nonatomic, strong) CTUser *user;
+@property (nonatomic, strong) CTUserOrder *userOrder;
+
 + (instancetype)sharedInstance;
++ (void)addProduct:(CTProduct *)product;
++ (void)removeProduct:(CTProduct *)product;
++ (BOOL)isContainInCurrentUserOrder:(CTProduct *)product;
 
 @end

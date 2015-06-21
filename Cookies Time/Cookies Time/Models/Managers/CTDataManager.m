@@ -207,7 +207,8 @@
 }
 
 + (NSURLSessionDataTask *)getProductsForCategory:(CTCategory *)category withResultBlock:(void (^)(NSArray *products, NSError *error))block {
-    return [[CTHTTPSessionManager sharedInstance] GET:[NSString stringWithFormat:@"%@?%@=%@", kGetProducts, kCategoryId, category.identifier] parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
+//    http://10.55.1.27:8888/api/product/getbycategory?categoryId=1
+    return [[CTHTTPSessionManager sharedInstance] GET:[NSString stringWithFormat:@"product/getbycategory?categoryId=%@", category.identifier] parameters:nil success:^(NSURLSessionDataTask * __unused task, id JSON) {
         NSLog(@"ProductsForCategory success: %@", JSON);
         
         NSInteger errorCode = [JSON integerForKey:kErrorCode ifNull:-1];

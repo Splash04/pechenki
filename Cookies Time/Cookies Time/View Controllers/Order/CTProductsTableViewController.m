@@ -7,6 +7,8 @@
 //
 
 #import "CTProductsTableViewController.h"
+#import "CTCategory.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface CTProductsTableViewController ()
 
@@ -28,6 +30,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self showProgress];
+    [CTDataManager getProductsForCategory:self.category withResultBlock:^(NSArray *products, NSError *error) {
+        [self hideProgress];
+        if(error != nil) {
+            NSLog(@"Products error: %@", error);
+        } else {
+            self.dataArray = [products mutableCopy];
+            [self.tableView reloadData];
+        }
+    }];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -49,15 +61,36 @@
     return [self.dataArray count];
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CTProduct *selectedProduct = self.dataArray[indexPath.row];
+    if([CTSession isContainInCurrentUserOrder:selectedProduct]) {
+        [CTSession removeProduct:selectedProduct];
+    } else {
+        [CTSession addProduct:selectedProduct];
+    }
     
-    // Configure the cell...
+    [self.tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
+ //   self.category = (CTCategory *)self.dataArray[indexPath.row];
+//    [self performSegueWithIdentifier:[CTProductsTableViewController segueIdentifier] sender:self];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    CTProductTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CTProductTableViewCell.cellIdentifier forIndexPath:indexPath];
+    if (cell == nil) {
+        cell = [[CTProductTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CTProductTableViewCell.cellIdentifier];
+    }
+    
+    CTProduct *product = (CTProduct *)self.dataArray[indexPath.row];
+    cell.name.text = product.name;
+    cell.weight.text = product.productWeight;
+    cell.price.text = [NSString stringWithFormat:@"%.1f", product.price];//((CTTeam *)self.dataArray[indexPath.row]).name;
+    NSURL *url = [NSURL URLWithString:product.imageUrl];
+    [cell.image setImageWithURL:url placeholderImage:[UIImage imageNamed:@"userIcon"]];
+    cell.checkboxButton.selected = [CTSession isContainInCurrentUserOrder:product];
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

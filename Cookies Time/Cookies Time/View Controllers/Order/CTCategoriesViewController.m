@@ -8,10 +8,12 @@
 
 #import "CTCategoriesViewController.h"
 #import "CTCategorieTableViewCell.h"
+#import "CTProductsTableViewController.h"
 
 @interface CTCategoriesViewController ()
 
 @property (strong, nonatomic) NSMutableArray *dataArray;
+@property (strong, nonatomic) CTCategory *category;
 
 @end
 
@@ -67,6 +69,7 @@
     return [self.dataArray count];
 }
 
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     CTCategorieTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CTCategorieTableViewCell.cellIdentifier forIndexPath:indexPath];
@@ -79,16 +82,19 @@
     //cell.twitterImage.text = ((CTTeam *)self.dataArray[indexPath.row]).info;
     
     return cell;
-    
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.category = (CTCategory *)self.dataArray[indexPath.row];
+    [self performSegueWithIdentifier:[CTProductsTableViewController segueIdentifier] sender:self];
 }
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if ([[segue identifier] isEqualToString:[CTPeopleListViewController segueIdentifier]]) {
-//        CTPeopleListViewController *peopleViewController = [segue destinationViewController];
-//        peopleViewController.team = self.team;
-//    }
-    
+    if ([[segue identifier] isEqualToString:[CTProductsTableViewController segueIdentifier]]) {
+        CTProductsTableViewController *peopleViewController = [segue destinationViewController];
+        peopleViewController.category = self.category;
+    }
 }
 
 @end

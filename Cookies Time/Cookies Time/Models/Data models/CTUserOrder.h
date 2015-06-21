@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) CTUser *user;
 @property (nonatomic, strong) CTTeam *team;
-@property (nonatomic, strong) NSArray *products;
+@property (nonatomic, strong) NSMutableArray *products;
 
 - (NSMutableDictionary *)attributs;
 

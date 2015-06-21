@@ -24,6 +24,7 @@
         self.productWeight = [attributes stringForKey:kProductWeight ifNull:nil];
         self.imageUrl = [attributes stringForKey:kImagePath ifNull:nil];
         self.categoryId = [attributes stringForKey:kCategoryId ifNull:nil];
+        self.price = [attributes doubleForKey:kPrice ifNull:0];
         NSDictionary *categoryDictionary = [attributes objectForKey:kCategory ifNull:nil];
         if(categoryDictionary != nil) {
             self.category = [[CTCategory alloc] initWithAttributes:categoryDictionary];
@@ -46,6 +47,7 @@
     [dictionary safeSetValue:self.imageUrl forKey:kImagePath];
     [dictionary safeSetValue:self.categoryId forKey:kCategoryId];
     [dictionary safeSetValue:[self.category attributs] forKey:kCategory];
+    [dictionary safeSetValue:[NSNumber numberWithDouble:self.price] forKey:kPrice];
     return dictionary;
 }
 
