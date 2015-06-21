@@ -1111,15 +1111,18 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P57-1v-njP">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" secondItem="P57-1v-njP" secondAttribute="height" multiplier="1:1" id="Dpl-eX-yKG"/>
                                                         <constraint firstAttribute="width" constant="75" id="Nr5-qV-PWL"/>
                                                     </constraints>
                                                     <variation key="default">
                                                         <mask key="constraints">
+                                                            <exclude reference="Dpl-eX-yKG"/>
                                                             <exclude reference="Nr5-qV-PWL"/>
                                                         </mask>
                                                     </variation>
                                                     <variation key="heightClass=regular-widthClass=compact">
                                                         <mask key="constraints">
+                                                            <include reference="Dpl-eX-yKG"/>
                                                             <include reference="Nr5-qV-PWL"/>
                                                         </mask>
                                                     </variation>
@@ -1127,16 +1130,29 @@
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQx-Fc-P0z">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="75" id="q2d-52-d9K"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                                    <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="91" y="8" width="301" height="75"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="q2d-52-d9K"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="heightClass=regular-widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="q2d-52-d9K"/>
+                                                        </mask>
                                                     </variation>
                                                 </textView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="P57-1v-njP" firstAttribute="top" secondItem="Y1N-nc-Y2z" secondAttribute="top" constant="8" id="32S-gw-y5Z"/>
+                                                <constraint firstItem="NQx-Fc-P0z" firstAttribute="top" secondItem="Y1N-nc-Y2z" secondAttribute="top" constant="8" id="746-Cr-9eD"/>
+                                                <constraint firstAttribute="trailing" secondItem="NQx-Fc-P0z" secondAttribute="trailing" constant="8" id="GqW-it-DWb"/>
                                                 <constraint firstItem="P57-1v-njP" firstAttribute="leading" secondItem="Y1N-nc-Y2z" secondAttribute="leading" constant="8" id="K1v-6m-fMJ"/>
+                                                <constraint firstItem="NQx-Fc-P0z" firstAttribute="leading" secondItem="P57-1v-njP" secondAttribute="trailing" constant="8" id="NeE-lp-cQI"/>
                                                 <constraint firstAttribute="bottom" secondItem="P57-1v-njP" secondAttribute="bottom" constant="8" id="cFx-p8-5eK"/>
                                             </constraints>
                                             <variation key="default">
@@ -1148,6 +1164,9 @@
                                                     <exclude reference="32S-gw-y5Z"/>
                                                     <exclude reference="K1v-6m-fMJ"/>
                                                     <exclude reference="cFx-p8-5eK"/>
+                                                    <exclude reference="746-Cr-9eD"/>
+                                                    <exclude reference="GqW-it-DWb"/>
+                                                    <exclude reference="NeE-lp-cQI"/>
                                                 </mask>
                                             </variation>
                                             <variation key="heightClass=regular-widthClass=compact">
@@ -1159,6 +1178,9 @@
                                                     <include reference="32S-gw-y5Z"/>
                                                     <include reference="K1v-6m-fMJ"/>
                                                     <include reference="cFx-p8-5eK"/>
+                                                    <include reference="746-Cr-9eD"/>
+                                                    <include reference="GqW-it-DWb"/>
+                                                    <include reference="NeE-lp-cQI"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>

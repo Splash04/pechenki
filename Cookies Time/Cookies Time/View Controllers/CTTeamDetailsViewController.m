@@ -12,6 +12,7 @@
 #import "CTPaymentInfoTableViewController.h"
 #import "UIImageView+AFNetworking.h"
 #import "CTCategoriesViewController.h"
+#import "CTTwit.h"
 
 @interface CTTeamDetailsViewController ()
 
@@ -106,6 +107,10 @@
     [self.btnMessages addGestureRecognizer:singleTap];
     
     self.dataArray = [[NSMutableArray alloc] init];
+    [self.dataArray addObject:[[CTTwit alloc] initWithText:@"Мы заказали наш первый обед через Cookies Time! Ура!" withImagePath:@"http://cookingday.ru/wp-content/uploads/2013/12/23.jpg"]];
+    [self.dataArray addObject:[[CTTwit alloc] initWithText:@"Отлично посидели с ребятами и посмеялись. С новыми силами в бой:)" withImagePath:@"http://www.mok.kz/upload/userfiles/images/%D1%81%D1%82%D1%83%D0%B4%D0%B5%D0%BD%D1%82%D0%B0%D0%BC/%D0%A1%D1%82%D0%BE%D0%BB%D0%BE%D0%B2%D0%B0%D1%8F.png"]];
+    [self.dataArray addObject:[[CTTwit alloc] initWithText:@"Предлагаю организовать грибной день. Отписываем свои предложения." withImagePath:@"http://www.classicbritishmotorcycles.com/images/uploads/Social%20Logos/twitter1.jpg"]];
+    [self.tableView reloadData];
 }
 
 - (void)tapPeople:(id)sender {
@@ -151,7 +156,10 @@
     }
     
 #warning !!!!
-    cell.twitterText.text = @"twit";//((CTTeam *)self.dataArray[indexPath.row]).name;
+    CTTwit *twit = (CTTwit *)self.dataArray[indexPath.row];
+    cell.twitterText.text = twit.text;//((CTTeam *)self.dataArray[indexPath.row]).name;
+    NSURL *url = [NSURL URLWithString:twit.imagePath];
+    [cell.twitterImage setImageWithURL:url placeholderImage:[UIImage imageNamed:@"userIcon"]];
     //cell.twitterImage.text = ((CTTeam *)self.dataArray[indexPath.row]).info;
     
     return cell;
